@@ -1,0 +1,126 @@
+
+### Querying for Non-existing Customer
+
+GET /api/customers/HPRIY
+Host: localhost:9091
+Accept: application/json
+
+
+### Querying for existing customer
+
+GET /api/customers/HEMAP
+Host: localhost:9091
+Accept: text/plain
+
+
+### Querying for existing customer
+
+GET /api/customers/ALFKI
+Host: localhost:9091
+Accept: application/json
+
+
+### Displaying All Customers
+
+GET /api/customers
+Host: localhost:9091
+Accept: application/json
+
+
+### Expecting first page
+
+GET /api/customers?_page=1
+Host: localhost:9091
+Accept: application/json
+
+
+### Expecting 3rd page assuming pagesixe is 10
+
+GET /api/customers?_page=3
+Host: localhost:9091
+Accept: application/json
+
+### Expecting 3rd page assuming pagesixe is 15
+
+GET /api/customers?_page=3&_limit=15
+Host: localhost:9091
+Accept: application/json
+
+
+
+### 
+
+GET /api/customers/filter?country=Mexico
+Host: localhost:9091
+Accept: application/json
+
+###
+
+GET /api/customers/filter?country=India
+Host: localhost:9091
+Accept: application/json
+
+###
+
+GET /api/customers/filter?contactTitle=Senior Data Engineer
+Host: localhost:9091
+Accept: application/json
+### The below must have a one line gap before adding body
+
+POST /api/customers
+Host: localhost:9091
+Accept: application/json
+Content-Type: application/json
+
+{
+    "customerId": "HEMAP",
+    "companyName": "Target India",
+    "contactName": "Hema Priya",
+    "contactTitle": "Senior Data Engineer",
+    "address": 
+    {"streetAddress": "Kukatpally",
+    "city": "Hyderabad",
+    "region": null,
+    "postalCode": "500072",
+    "country": "India"
+    },
+    "phone": "+91 8500903254",
+    "fax": null
+}
+
+#### update a specific Product
+### Note: Here, the product Id 55 is not used
+### Only the id mentioned in the PUT command is updated
+PUT /api/customers/HEMAP
+Host: localhost:9091
+Accept: application/json
+Content-Type: application/json
+
+{
+   "customerId": "HEMAP",
+    "companyName": "Target Corporation",
+    "contactName": "Hema Priya",
+    "contactTitle": "Senior Data Engineer",
+    "address": 
+     {"streetAddress": "Kukatpally",
+    "city": "Hyderabad",
+    "region": null,
+    "postalCode": "500072",
+    "country": "India"
+    },
+    "phone": "+91 8500903254",
+    "fax": null
+}
+
+### Deleting invalid id
+
+DELETE /api/customers/HPRIY
+Host: localhost:9091
+Accept: application/json
+
+
+### Deleting product with valid id
+
+DELETE /api/customers/HEMAP
+Host: localhost:9091
+Accept: application/json

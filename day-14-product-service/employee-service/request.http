@@ -1,0 +1,147 @@
+
+### Querying for Non-existing Employee
+
+GET /api/employees/10
+Host: localhost:9092
+Accept: application/json
+
+
+### Querying for existing Employee
+
+GET /api/employees/2
+Host: localhost:9092
+Accept: text/plain
+
+
+### Querying for existing employee
+
+GET /api/employees/2
+Host: localhost:9092
+Accept: application/json
+
+
+### Displaying All employees
+
+GET /api/employees
+Host: localhost:9092
+Accept: application/json
+
+
+### Expecting first page
+
+GET /api/employees?_page=1
+Host: localhost:9092
+Accept: application/json
+
+
+### Expecting 2nd page assuming pagesixe is 10
+
+GET /api/employees?_page=2
+Host: localhost:9092
+Accept: application/json
+
+### Expecting 2nd page assuming pagesixe is 15
+
+GET /api/employees?_page=2&_limit=15
+Host: localhost:9092
+Accept: application/json
+
+
+### Sending Null parameter (TBD)
+
+GET /api/employees/filter?reportsTo=
+Host: localhost:9092
+Accept: application/json
+
+### 
+
+GET /api/employees/filter?country=UK
+Host: localhost:9092
+Accept: application/json
+
+###
+
+GET /api/employees/filter?country=India
+Host: localhost:9092
+Accept: application/json
+
+###
+
+GET /api/employees/filter?title=Sales Representative
+Host: localhost:9092
+Accept: application/json
+### The below must have a one line gap before adding body
+
+
+
+### Filtering by hire date range (TBD)
+
+GET /api/products/filter?hireFrom=1995&hireTo=2000
+Host: localhost:9090
+Accept: application/json
+
+###
+
+POST /api/employees
+Host: localhost:9092
+Accept: application/json
+Content-Type: application/json
+
+{
+    
+  "lastName": "Hema",
+  "firstName": "Priya",
+  "title": "VP, Data Engineering",
+  "titleOfCourtesy": "Ms.",
+  "birthDate": "1997-11-20T18:30:00.000+00:00",
+  "hireDate": "2021-09-06T18:30:00.000+00:00",
+  "address": "Kukatpally",
+  "city": "Hyderabad",
+  "region": "WA",
+  "postalCode": "500072",
+  "country": "India",
+  "homePhone": "8500903254",
+  "extension": null,
+  "notes": "Hema has been appointed as Sr. Data Engineer post her M.Tech in Data science in IIT Jammu",
+  "reportsTo": 2
+}
+
+#### update a specific Product
+### Note: Here, the product Id 55 is not used
+### Only the id mentioned in the PUT command is updated
+PUT /api/employees/10
+Host: localhost:9092
+Accept: application/json
+Content-Type: application/json
+
+{
+  "employeeId": 10,
+  "lastName": "Priya",
+  "firstName": "Hema",
+  "title": "VP, Data Engineering",
+  "titleOfCourtesy": "Ms.",
+  "birthDate": "1997-11-20T18:30:00.000+00:00",
+  "hireDate": "2021-09-06T18:30:00.000+00:00",
+  "address": "Kukatpally",
+  "city": "Hyderabad",
+  "region": null,
+  "postalCode": "500072",
+  "country": "India",
+  "homePhone": "8500903254",
+  "extension": null,
+  "notes": "Hema has been appointed as Sr. Data Engineer post her M.Tech in Data science in IIT Jammu",
+  "reportsTo": 2
+}
+
+### Deleting invalid id
+
+DELETE /api/employees/112
+Host: localhost:9092
+Accept: application/json
+
+
+### Deleting product with valid id
+
+DELETE /api/employees/10
+Host: localhost:9092
+Accept: application/json

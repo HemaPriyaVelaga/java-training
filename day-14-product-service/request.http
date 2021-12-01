@@ -1,0 +1,20 @@
+
+### The expectation here is to make all services run on 
+## a single port, that of api gateway
+
+http://localhost:5000/api/products/8
+
+###
+http://localhost:5000/api/customers/ALFKI
+
+###
+http://localhost:5000/api/employees/9
+
+
+
+###
+http://localhost:5000/api/shippers/3
+
+
+###
+http://localhost:5000/api/orders/11008

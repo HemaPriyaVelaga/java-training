@@ -1,0 +1,113 @@
+GET /api/products/78
+Host: localhost:9090
+Accept: application/json
+
+
+###
+
+GET /api/products/72
+Host: localhost:9090
+Accept: text/plain
+
+### NOTE: Only 77 products exist
+
+GET /api/products/89
+Host: localhost:9090
+Accept: application/xml
+
+###
+
+GET /api/products
+Host: localhost:9090
+Accept: application/json
+
+
+### Expecting first page
+
+GET /api/products
+Host: localhost:9090
+Accept: application/json
+
+
+### Expecting 3rd page assuming pagesixe is 10
+
+GET /api/products?_page=3
+Host: localhost:9090
+Accept: application/json
+
+### Expecting 3rd page assuming pagesixe is 15
+
+GET /api/products?_page=3&_limit=15
+Host: localhost:9090
+Accept: application/json
+
+###
+
+GET /api/products/filter?discontinued=true
+Host: localhost:9090
+Accept: application/json
+
+###
+
+GET /api/products/filter?discontinued=false
+Host: localhost:9090
+Accept: application/json
+
+###
+
+GET /api/products/filter?min=100&max=1000
+Host: localhost:9090
+Accept: application/json
+
+
+### The below must have a one line gap before adding body
+### Note: Only 77 products exist , the new ID will be 78
+POST /api/products
+Host: localhost:9090
+Accept: application/json
+Content-Type: application/json
+
+{
+  "productName": "Rogede sild Rogede sild",
+  "categoryId": "8",
+  "supplierId": "21",
+  "quantityPerUnit": "1k pkg. x 10 packs",
+  "unitPrice": 19.5,
+  "unitsInStock": 5,
+  "unitsOnOrder": 70,
+  "reorderLevel": 15,
+  "discontinued": 0
+}
+
+#### update a specific Product
+### Note: Here, the product Id 55 is not used
+### Only the id mentioned in the PUT command is updated
+PUT /api/products/78
+Host: localhost:9090
+Accept: application/json
+Content-Type: application/json
+
+{
+  "productId":55,
+  "productName": "Oreo Milk Shake",
+  "categoryId": "3",
+  "supplierId": "21",
+  "quantityPerUnit": "1 lt.",
+  "unitPrice": 19.5,
+  "unitsInStock": 25,
+  "unitsOnOrder": 70,
+  "reorderLevel": 15,
+  "discontinued": 0
+}
+
+### Deleting invalid id
+
+DELETE /api/products/222
+Host: localhost:9090
+Accept: application/json
+
+### Deleting product with valid id
+
+DELETE /api/products/78
+Host: localhost:9090
+Accept: application/json

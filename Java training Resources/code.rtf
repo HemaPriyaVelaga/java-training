@@ -1,0 +1,375 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fmodern\fcharset0 Courier-Oblique;}
+{\colortbl;\red255\green255\blue255;\red140\green119\blue13;\red0\green29\blue164;\red10\green79\blue103;
+\red9\green9\blue9;\red114\green0\blue130;\red18\green51\blue230;\red121\green121\blue121;\red17\green109\blue18;
+\red2\green34\blue149;\red0\green29\blue164;\red10\green79\blue103;\red9\green9\blue9;\red17\green109\blue18;
+\red2\green34\blue149;\red18\green51\blue230;\red114\green0\blue130;\red121\green121\blue121;}
+{\*\expandedcolortbl;;\csgenericrgb\c54902\c46667\c5098;\csgenericrgb\c0\c11373\c64314;\csgenericrgb\c3922\c30980\c40392;
+\csgenericrgb\c3529\c3529\c3529;\csgenericrgb\c44706\c0\c50980;\csgenericrgb\c7059\c20000\c90196;\csgenericrgb\c47451\c47451\c47451;\csgenericrgb\c6667\c42745\c7059;
+\csgenericrgb\c784\c13333\c58431;\csgenericrgb\c0\c11373\c64314;\csgenericrgb\c3922\c30980\c40392;\csgenericrgb\c3529\c3529\c3529;\csgenericrgb\c6667\c42745\c7059;
+\csgenericrgb\c784\c13333\c58431;\csgenericrgb\c7059\c20000\c90196;\csgenericrgb\c44706\c0\c50980;\csgenericrgb\c47451\c47451\c47451;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf2 @Override\
+\cf3 public int \cf4 compareTo\cf5 (\cf0 Contact \cf5 that) \{\
+\
+    \cf3 int \cf5 diff = \cf0 Integer\cf5 .
+\f1\i compare
+\f0\i0 (\cf3 this\cf5 .\cf6 id\cf5 , that.\cf6 id\cf5 );\
+    \cf3 if \cf5 (diff == \cf7 0\cf5 ) \{\
+        
+\f1\i \cf8 //System.out.println("ID matched");\
+        
+\f0\i0 \cf5 diff = \cf3 this\cf5 .\cf6 firstname\cf5 .compareTo(that.\cf6 firstname\cf5 );\
+        \cf3 if \cf5 (diff == \cf7 0\cf5 ) \{\
+\
+            
+\f1\i \cf8 //System.out.println("firstname matched");\
+            
+\f0\i0 \cf5 diff = \cf3 this\cf5 .\cf6 lastname\cf5 .compareTo(that.\cf6 lastname\cf5 );\
+            \cf3 if \cf5 ( diff == \cf7 0\cf5 ) \{\
+                
+\f1\i \cf8 //System.out.println("lastname matched");\
+                
+\f0\i0 \cf5 diff = \cf3 this\cf5 .\cf6 gender\cf5 .compareTo(that.\cf6 gender\cf5 );\
+                \cf3 if \cf5 (diff == \cf7 0\cf5 ) \{\
+                    diff = \cf3 this\cf5 .\cf6 email\cf5 .compareTo(that.\cf6 email\cf5 );\
+                   
+\f1\i \cf8 // System.out.println("Gender matched");\
+                    
+\f0\i0 \cf3 if \cf5 ( diff == \cf7 0\cf5 ) \{\
+                        diff = \cf3 this\cf5 .\cf6 phone\cf5 .compareTo(that.\cf6 phone\cf5 );\
+                        
+\f1\i \cf8 //System.out.println("email matched");\
+                        
+\f0\i0 \cf3 if \cf5 ( diff == \cf7 0\cf5 ) \{\
+                            diff = \cf3 this\cf5 .\cf6 address\cf5 .compareTo(that.\cf6 address\cf5 );\
+                           
+\f1\i \cf8 // System.out.println("Phone matched");\
+                                
+\f0\i0 \cf3 if \cf5 ( diff == \cf7 0\cf5 ) \{\
+                                    diff = \cf3 this\cf5 .\cf6 city\cf5 .compareTo(that.\cf6 city\cf5 );\
+                                    
+\f1\i \cf8 //System.out.println("Address matched");\
+                                    
+\f0\i0 \cf3 if \cf5 (diff == \cf7 0\cf5 ) \{\
+                                        diff = \cf3 this\cf5 .\cf6 state\cf5 .compareTo(that.\cf6 state\cf5 );\
+                                        
+\f1\i \cf8 //System.out.println("city matched");\
+                                        
+\f0\i0 \cf3 if \cf5 (diff == \cf7 0\cf5 ) \{\
+                                            
+\f1\i \cf8 //System.out.println("state matched");\
+                                            
+\f0\i0 \cf5 diff = \cf0 Integer\cf5 .
+\f1\i compare
+\f0\i0 (that.\cf6 pincode\cf5 , \cf3 this\cf5 .\cf6 pincode\cf5 );\
+                                            \cf3 if \cf5 (diff==\cf7 0\cf5 ) \{\
+                                                
+\f1\i \cf8 //System.out.println("pincode matched");\
+                                                
+\f0\i0 \cf5 diff = \cf3 this\cf5 .\cf6 country\cf5 .compareTo(that.\cf6 country\cf5 );\
+                                                \cf3 if \cf5 ( diff== \cf7 0\cf5 ) \{\
+                                                    
+\f1\i \cf8 //System.out.println("country matched");\
+                                                    
+\f0\i0 \cf5 diff = \cf3 this\cf5 .\cf6 birthDate\cf5 .compareTo(that.\cf6 birthDate\cf5 );\
+                                                    \cf3 return \cf5 diff;\
+\
+                                                \}\
+                                            \}\
+                                        \}\
+                                    \}\
+                                \}\
+                        \}\
+                    \}\
+                \}\
+            \}\
+        \}\
+    \}\
+    \cf3 return \cf5 diff;\
+\}\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\cf0 System\cf5 .
+\f1\i \cf6 out
+\f0\i0 \cf5 .println(\cf9 "You have selected the add contact option," \cf5 +\
+        \cf9 " so, please enter the following details: "\cf5 );\
+\cf0 Contact c\cf5 ;\
+\
+\
+\cf0 Scanner sc \cf5 = \cf3 new \cf5 Scanner(\cf0 System\cf5 .
+\f1\i \cf6 in
+\f0\i0 \cf5 );\
+\cf0 System\cf5 .
+\f1\i \cf6 out
+\f0\i0 \cf5 .print(\cf9 "First Name: "\cf5 );\
+\cf0 String \cf5 str = \cf0 sc\cf5 .nextLine();\
+\cf0 c\cf5 .setFirstname(str);\
+\
+\cf0 System\cf5 .
+\f1\i \cf6 out
+\f0\i0 \cf5 .print(\cf9 "\cf10 \\n\cf9 Last Name: "\cf5 );\
+str = \cf0 sc\cf5 .nextLine();\
+setLastname(str);\
+\
+\cf0 System\cf5 .
+\f1\i \cf6 out
+\f0\i0 \cf5 .print(\cf9 "\cf10 \\n\cf9 Gender (MALE or FEMALE): "\cf5 );\
+\
+\cf3 while\cf5 (\cf3 true\cf5 ) \{\
+\
+    \cf3 try \cf5 \{\
+        str = \cf0 sc\cf5 .nextLine();\
+        \cf3 if \cf5 (str.equals(\cf9 "MALE"\cf5 )) \{\
+            setGender(\cf0 Gender\cf5 .
+\f1\i \cf6 MALE
+\f0\i0 \cf5 );\
+            \cf3 break\cf5 ;\
+        \} \cf3 else if \cf5 (str.equals(\cf9 "FEMALE"\cf5 )) \{\
+            setGender(\cf0 Gender\cf5 .
+\f1\i \cf6 FEMALE
+\f0\i0 \cf5 );\
+            \cf3 break\cf5 ;\
+        \} \cf3 else \cf5 \{\
+            \cf0 System\cf5 .
+\f1\i \cf6 out
+\f0\i0 \cf5 .println(\cf9 "Please enter from the given options"\cf5 );\
+        \}\
+    \}\
+\
+    \cf3 catch \cf5 (\cf0 Exception \cf5 ex) \{\
+        \cf0 System\cf5 .
+\f1\i \cf6 out
+\f0\i0 \cf5 .println(ex.getMessage());\
+        \cf0 System\cf5 .
+\f1\i \cf6 out
+\f0\i0 \cf5 .println(\cf9 "Please enter from the given options"\cf5 );\
+    \}\
+\}\
+\
+\cf0 System\cf5 .
+\f1\i \cf6 out
+\f0\i0 \cf5 .print(\cf9 "\cf10 \\n\cf9 Email: "\cf5 );\
+str = \cf0 sc\cf5 .nextLine();\
+setEmail(str);\
+\
+\cf0 System\cf5 .
+\f1\i \cf6 out
+\f0\i0 \cf5 .print(\cf9 "\cf10 \\n\cf9 Phone No: "\cf5 );\
+str = \cf0 sc\cf5 .nextLine();\
+setPhone(str);\
+\
+\cf0 System\cf5 .
+\f1\i \cf6 out
+\f0\i0 \cf5 .print(\cf9 "\cf10 \\n\cf9 Address: "\cf5 );\
+str = \cf0 sc\cf5 .nextLine();\
+setAddress(str);\
+\
+\cf0 System\cf5 .
+\f1\i \cf6 out
+\f0\i0 \cf5 .print(\cf9 "\cf10 \\n\cf9 City: "\cf5 );\
+str = \cf0 sc\cf5 .nextLine();\
+setCity(str);\
+\
+\cf0 System\cf5 .
+\f1\i \cf6 out
+\f0\i0 \cf5 .print(\cf9 "\cf10 \\n\cf9 State: "\cf5 );\
+str = \cf0 sc\cf5 .nextLine();\
+setState(str);\
+\
+\cf0 System\cf5 .
+\f1\i \cf6 out
+\f0\i0 \cf5 .print(\cf9 "\cf10 \\n\cf9 Pin code: "\cf5 );\
+\cf3 int \cf0 n \cf5 = \cf0 sc\cf5 .nextInt();\
+\cf0 sc\cf5 .nextLine();\
+setPincode(\cf0 n\cf5 );\
+\
+\
+\
+\cf3 int \cf0 num \cf5 = \cf0 sc\cf5 .nextInt();\
+\
+\cf3 return \cf0 c\cf5 ;\
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf11 private void \cf12 editContact\cf13 ()\
+\{\
+    \cf0 Contact c \cf13 = \cf11 new \cf13 Contact();\
+    \cf11 try\
+    \cf13 \{\
+        \cf11 int \cf0 id \cf13 = \cf0 KeyboardUtil\cf13 .
+\f1\i getInt
+\f0\i0 (\cf14 "Enter id of the contact to be edited: "\cf13 );\
+        \
+        \cf11 int \cf0 editNum \cf13 = \cf0 KeyboardUtil\cf13 .
+\f1\i getInt
+\f0\i0 (\cf14 "Which of the following do you want to edit?" \cf13 +\
+                \cf14 "\cf15 \\n\cf14 1. First name\cf15 \\n\cf14 2. Last name\cf15 \\n\cf14 3. Gender\cf15 \\n\cf14 4. Email ID\cf15 \\n\cf14 5. Phone number\cf15 \\n\cf14 6. Address" \cf13 +\
+                \cf14 "\cf15 \\n\cf14 7. City\cf15 \\n\cf14 8. State\cf15 \\n\cf14 9. PIN Code\cf15 \\n\cf14 10. Country\cf15 \\n\cf14 11. Date Of Birth\cf15 \\n\cf14 0. Exit"\cf13 );\
+        \
+        \cf11 switch \cf13 (\cf0 editNum\cf13 )\
+        \{\
+            \cf11 case \cf16 1\cf13 : \
+            \{\
+                \
+                \cf0 String firstname \cf13 = \cf0 KeyboardUtil\cf13 .
+\f1\i getString
+\f0\i0 (\cf14 "Enter First Name: "\cf13 );\
+                \cf0 c\cf13 .setFirstname(\cf0 firstname\cf13 );\
+                \cf11 break\cf13 ;\
+                \
+            \}\
+            \
+            \cf11 case \cf16 2\cf13 : \
+            \{\
+                \cf0 String lastname \cf13 = \cf0 KeyboardUtil\cf13 .
+\f1\i getString
+\f0\i0 (\cf14 "Enter Last Name: "\cf13 );\
+                \cf0 c\cf13 .setLastname(\cf0 lastname\cf13 );\
+                \cf11 break\cf13 ;\
+            \}\
+            \
+            \cf11 case \cf16 3\cf13 : \
+            \{\
+                \cf0 Gender \cf13 gender = \cf0 Gender\cf13 .
+\f1\i \cf17 MALE
+\f0\i0 \cf13 ;\
+                \cf11 while\cf13 (\cf11 true\cf13 )\
+                \{\
+                    \cf0 String sex \cf13 = \cf0 KeyboardUtil\cf13 .
+\f1\i getString
+\f0\i0 (\cf14 "Enter gender (MALE or FEMALE): "\cf13 );\
+                    \cf11 if\cf13 (\cf0 sex\cf13 .equals(\cf14 "MALE"\cf13 ))\
+                    \{\
+                        gender = \cf0 Gender\cf13 .
+\f1\i \cf17 MALE
+\f0\i0 \cf13 ;\
+                        \cf0 c\cf13 .setGender(gender);\
+                        \cf11 break\cf13 ;\
+                    \}\
+                    \cf11 else if\cf13 (\cf0 sex\cf13 .equals(\cf14 "FEMALE"\cf13 ))\
+                    \{\
+                        gender = \cf0 Gender\cf13 .
+\f1\i \cf17 FEMALE
+\f0\i0 \cf13 ;\
+                        \cf0 c\cf13 .setGender(gender);\
+                        \cf11 break\cf13 ;\
+                    \}\
+                    \cf11 else\
+                    \cf13 \{\
+                        \cf0 System\cf13 .
+\f1\i \cf17 out
+\f0\i0 \cf13 .println(\cf14 "Wrong input entered. Please enter MALE or FEMALE"\cf13 );\
+                    \}\
+                \}\
+                \cf11 break\cf13 ;\
+            \}\
+            \
+            \cf11 case \cf16 4\cf13 : \
+            \{\
+                \cf0 String email \cf13 = \cf0 KeyboardUtil\cf13 .
+\f1\i getString
+\f0\i0 (\cf14 "Enter Email ID: "\cf13 );\
+                \cf0 c\cf13 .setEmail(\cf0 email\cf13 );\
+                \cf11 break\cf13 ;\
+            \}\
+            \
+            \cf11 case \cf16 5\cf13 : \
+            \{\
+                \cf0 String phone \cf13 = \cf0 KeyboardUtil\cf13 .
+\f1\i getString
+\f0\i0 (\cf14 "Enter Phone number: "\cf13 );\
+                \cf0 c\cf13 .setPhone(\cf0 phone\cf13 );\
+                \cf11 break\cf13 ;\
+            \}\
+            \
+            \cf11 case \cf16 6\cf13 :\
+            \{\
+                \cf0 String address \cf13 = \cf0 KeyboardUtil\cf13 .
+\f1\i getString
+\f0\i0 (\cf14 "Enter Address: "\cf13 );\
+                \cf0 c\cf13 .setAddress(\cf0 address\cf13 );\
+                \cf11 break\cf13 ;\
+            \}\
+            \
+            \cf11 case \cf16 7\cf13 :\
+            \{\
+                \cf0 String city \cf13 = \cf0 KeyboardUtil\cf13 .
+\f1\i getString
+\f0\i0 (\cf14 "Enter City: "\cf13 );\
+                \cf0 c\cf13 .setCity(\cf0 city\cf13 );\
+                \cf11 break\cf13 ;\
+            \}\
+            \
+            \cf11 case \cf16 8\cf13 :\
+            \{\
+                \cf0 String state \cf13 = \cf0 KeyboardUtil\cf13 .
+\f1\i getString
+\f0\i0 (\cf14 "Enter State: "\cf13 );\
+                \cf0 c\cf13 .setState(\cf0 state\cf13 );\
+                \cf11 break\cf13 ;\
+            \}\
+            \
+            \cf11 case \cf16 9\cf13 :\
+            \{\
+                \cf0 Integer pincode \cf13 = \cf0 KeyboardUtil\cf13 .
+\f1\i getInt
+\f0\i0 (\cf14 "Enter PIN code: "\cf13 );\
+                \cf0 c\cf13 .setPincode(\cf0 pincode\cf13 );\
+                \cf11 break\cf13 ;\
+            \}\
+            \
+            \cf11 case \cf16 10\cf13 :\
+            \{\
+                \cf0 String country \cf13 = \cf0 KeyboardUtil\cf13 .
+\f1\i getString
+\f0\i0 (\cf14 "Enter Country: "\cf13 );\
+                \cf0 c\cf13 .setCountry(\cf0 country\cf13 );\
+                \cf11 break\cf13 ;\
+            \}\
+            \
+            \cf11 case \cf16 11\cf13 :\
+            \{\
+                \cf0 Date date \cf13 = \cf0 KeyboardUtil\cf13 .
+\f1\i getDate
+\f0\i0 (\cf14 "Please enter your DOB in dd/MM/yyyy format: "\cf13 );\
+                \cf0 c\cf13 .setBirthDate(\cf0 date\cf13 );\
+                \cf11 break\cf13 ;\
+            \}\
+        \}\
+\
+        
+\f1\i \cf18 //Contact p = new Contact(id, firstname, lastname, gender, email, phone, address, city, state, pincode, country, date);\
+        
+\f0\i0 \cf17 daolist\cf13 .updateContact(\cf0 c\cf13 );\
+        \cf0 System\cf13 .
+\f1\i \cf17 out
+\f0\i0 \cf13 .println(\cf14 "Contact Updated successfully......!"\cf13 );\
+\
+    \}\
+    \cf11 catch \cf13 (\cf0 Exception \cf13 ex)\
+    \{\
+        \cf0 System\cf13 .
+\f1\i \cf17 out
+\f0\i0 \cf13 .println(\cf14 "Problem occurred!! "\cf13 );\
+        ex.printStackTrace();\
+    \}\
+    \
+\}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf5 \
+\
+}

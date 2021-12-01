@@ -1,0 +1,21 @@
+server:
+  port:
+    ${APP_PORT:8082}
+
+spring:
+  application:
+    name: HELLO-SERVICE
+
+
+logging:
+  level:
+    org:
+      springframework: DEBUG
+    com:
+      training: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*' ## Including every metric to actuator

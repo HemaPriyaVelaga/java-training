@@ -1,0 +1,118 @@
+version: '3'
+
+services:
+
+  mysql8server:
+    container_name: mysql8server
+    ports:
+      - '3306:3306'
+      - '33060:33060'
+    environment:
+      - MYSQL_ROOT_PASSWORD=hemapriya
+    volumes:
+      - 'mysql_data:/var/lib/mysql'
+    image: 'mysql:latest'
+
+  eureka-service: # docker run
+    container_name: eureka-service  
+    ports:
+      - '8761:8761' 
+    image: 'eureka-service:latest'  # or we can use: build: ./eureka-service/.
+
+
+  customer-service: # docker run
+    container_name: customer-service  # --name=CUSTOMER_SERVICE
+    ports:
+      - '9091:9091' # -p 9091:9091
+    depends_on: 
+      - mysql8server
+      - eureka-service
+    environment:
+      - MYSQL_HOST=mysql8server
+      - EUREKA_SERVER_HOST=eureka-service
+    image: 'customer-service:latest'  
+
+  product-service: # docker run
+    container_name: product-service  
+    ports:
+      - '9090:9090' 
+    depends_on: 
+      - mysql8server
+      - eureka-service
+    environment:
+      - MYSQL_HOST=mysql8server
+      - EUREKA_SERVER_HOST=eureka-service
+    image: 'product-service:latest'
+
+  employee-service: # docker run
+    container_name: employee-service  
+    ports:
+      - '9092:9092' 
+    depends_on: 
+      - mysql8server
+      - eureka-service
+    environment:
+      - MYSQL_HOST=mysql8server
+      - EUREKA_SERVER_HOST=eureka-service
+    image: 'employee-service:latest'
+
+  shippers-service: # docker run
+    container_name: shippers-service  
+    ports:
+      - '9093:9093' 
+    depends_on: 
+      - mysql8server
+      - eureka-service
+    environment:
+      - MYSQL_HOST=mysql8server
+      - EUREKA_SERVER_HOST=eureka-service
+    image: 'shippers-service:latest'
+  
+  product-service-2: # to demonstrate the need for load balancer
+    container_name: product-service-2  
+    ports:
+      - '9094:9094' 
+    depends_on: 
+      - mysql8server
+      - eureka-service
+    environment:
+      - MYSQL_HOST=mysql8server
+      - EUREKA_SERVER_HOST=eureka-service
+      - APP_PORT=9094
+    image: 'product-service:latest'
+
+  
+  order-service: # to demonstrate the need for load balancer
+    container_name: order-service  
+    ports:
+      - '9095:9095' 
+    depends_on: 
+      - mysql8server
+      - eureka-service
+    environment:
+      - MYSQL_HOST=mysql8server
+      - EUREKA_SERVER_HOST=eureka-service
+      - CUSTOMER_SERVICE_URL=customer-service
+      - CUSTOMER_SERVICE_PORT=9091
+      - PRODUCT_SERVICE_URL=product-service
+      - PRODUCT_SERVICE_PORT=9090
+      
+    image: 'order-service:latest'
+
+  api-gateway-service:
+    container_name: api-gateway-service
+    ports:
+      - '5000:5000'
+    depends_on:
+      - eureka-service
+    environment:
+      - EUREKA_SERVER_HOST=eureka-service
+    links:
+      - eureka-service
+    image: 'api-gateway-service:latest'
+
+  
+volumes:
+  mysql_data:
+    name: mysql_data
+    driver: local

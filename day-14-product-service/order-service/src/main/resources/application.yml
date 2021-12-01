@@ -1,0 +1,42 @@
+
+server:
+  port: ${SERVER_PORT:9095}
+  ## If no port number is mentioned, 9090 will be automatically used
+spring:
+  application:
+    name: ORDER-SERVICE
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/northwind
+    username: root
+    password: ${MYSQL_PASSWORD:hemapriya}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        ## Add the above to make it take names of table as we mention (As the table names are case-sensitive)
+logging:
+  level:
+    org:
+      hibernate: DEBUG
+      springframework: INFO
+    com:
+      training:
+        orderservice: DEBUG
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+
+    serviceUrl:
+      defaultZone: http://${EUREKA_SERVER_HOST:localhost}:8761/eureka/
+  instance:
+    hostname: ${EUREKA_SERVER_HOST:localhost}
+    prefer-ip-address: true
+
+microservices:
+  url:
+    customer-service: http://${CUSTOMER_SERVICE_URL:localhost}:${CUSTOMER_SERVICE_PORT:9091}/api/customers/
+    product-service: http://${PRODUCT_SERVICE_URL:localhost}:${PRODUCT_SERVICE_PORT:9090}/api/products/

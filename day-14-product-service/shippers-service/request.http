@@ -1,0 +1,83 @@
+GET /api/shippers/1
+Host: localhost:9093
+Accept: application/json
+
+###
+GET /api/shippers/4
+Host: localhost:9093
+Accept: application/json
+
+
+###
+
+GET /api/shippers/1
+Host: localhost:9093
+Accept: text/plain
+
+
+
+### Expecting first page
+
+GET /api/shippers
+Host: localhost:9093
+Accept: application/json
+
+
+### Expecting 3rd page assuming pagesixe is 15
+
+GET /api/shippers?_page=3&_limit=15
+Host: localhost:9093
+Accept: application/json
+
+###
+
+GET /api/shippers/filter?companyName=Speedy Express
+Host: localhost:9093
+Accept: application/json
+
+###
+
+GET /api/shippers/filter?companyName=hema
+Host: localhost:9093
+Accept: application/json
+
+
+
+### The below must have a one line gap before adding body
+### Note: Only 77 products exist , the new ID will be 78
+POST /api/shippers
+Host: localhost:9093
+Accept: application/json
+Content-Type: application/json
+
+{
+   "shipperId": 4,
+  "companyName": "Blue Dart",
+  "phone": "(040) 555-8888"
+}
+
+#### update a specific Product
+### Note: Here, the product Id 55 is not used
+### Only the id mentioned in the PUT command is updated
+PUT /api/shippers/4
+Host: localhost:9093
+Accept: application/json
+Content-Type: application/json
+
+{ 
+    "shipperId": 4,
+  "companyName": "Blue Dart India",
+  "phone": "(040) 333-8888"
+}
+
+### Deleting invalid id
+
+DELETE /api/shippers/222
+Host: localhost:9093
+Accept: application/json
+
+### Deleting product with valid id
+
+DELETE /api/shippers/4
+Host: localhost:9093
+Accept: application/json

@@ -1,0 +1,6 @@
+projectKey=com.target.java.training:day-09-unittesting-code-coverage-quality
+serverUrl=http://localhost:9000
+serverVersion=9.1.0.47736
+dashboardUrl=http://localhost:9000/dashboard?id=com.target.java.training%3Aday-09-unittesting-code-coverage-quality
+ceTaskId=AXwRblhPnMwbgD8ncRb6
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXwRblhPnMwbgD8ncRb6

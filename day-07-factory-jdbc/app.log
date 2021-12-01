@@ -1,0 +1,2271 @@
+[DEBUG] 2021-09-21 11:01:12,007 main            com.target.java.training.programs.ConnectToDBServer [  27] These are the registered JDBC drivers in DriverManager
+[DEBUG] 2021-09-21 11:01:12,022 main            com.target.java.training.programs.ConnectToDBServer [  28] org.h2.Driver@cb0ed20
+[DEBUG] 2021-09-21 11:05:44,662 main            com.target.java.training.programs.ConnectToDBServer [  27] These are the registered JDBC drivers in DriverManager
+[DEBUG] 2021-09-21 11:05:44,836 main            com.target.java.training.programs.ConnectToDBServer [  28] org.h2.Driver@1fc2b765
+[DEBUG] 2021-09-21 11:05:44,836 main            com.target.java.training.programs.ConnectToDBServer [  28] oracle.jdbc.OracleDriver@7276c8cd
+[DEBUG] 2021-09-21 11:05:44,836 main            com.target.java.training.programs.ConnectToDBServer [  28] org.postgresql.Driver@4fb0f2b9
+[DEBUG] 2021-09-21 11:06:48,682 main            com.target.java.training.programs.ConnectToDBServer [  27] These are the registered JDBC drivers in DriverManager
+[DEBUG] 2021-09-21 11:06:48,848 main            com.target.java.training.programs.ConnectToDBServer [  28] org.h2.Driver@2de8284b
+[DEBUG] 2021-09-21 11:06:48,848 main            com.target.java.training.programs.ConnectToDBServer [  28] com.mysql.cj.jdbc.Driver@545997b1
+[DEBUG] 2021-09-21 11:06:48,848 main            com.target.java.training.programs.ConnectToDBServer [  28] oracle.jdbc.OracleDriver@5d11346a
+[DEBUG] 2021-09-21 11:06:48,849 main            com.target.java.training.programs.ConnectToDBServer [  28] org.postgresql.Driver@223d2c72
+[DEBUG] 2021-09-21 11:09:08,990 main            com.target.java.training.programs.ConnectToDBServer [  28] These are the registered JDBC drivers in DriverManager
+[DEBUG] 2021-09-21 11:09:09,153 main            com.target.java.training.programs.ConnectToDBServer [  29] org.h2.Driver@2de8284b
+[DEBUG] 2021-09-21 11:09:09,154 main            com.target.java.training.programs.ConnectToDBServer [  29] com.mysql.cj.jdbc.Driver@545997b1
+[DEBUG] 2021-09-21 11:09:09,154 main            com.target.java.training.programs.ConnectToDBServer [  29] oracle.jdbc.OracleDriver@5d11346a
+[DEBUG] 2021-09-21 11:09:09,154 main            com.target.java.training.programs.ConnectToDBServer [  29] org.postgresql.Driver@223d2c72
+[DEBUG] 2021-09-21 11:11:07,664 main            com.target.java.training.programs.ConnectToDBServer [  28] These are the registered JDBC drivers in DriverManager
+[DEBUG] 2021-09-21 11:11:07,833 main            com.target.java.training.programs.ConnectToDBServer [  29] org.h2.Driver@2de8284b
+[DEBUG] 2021-09-21 11:11:07,833 main            com.target.java.training.programs.ConnectToDBServer [  29] com.mysql.cj.jdbc.Driver@545997b1
+[DEBUG] 2021-09-21 11:11:07,833 main            com.target.java.training.programs.ConnectToDBServer [  29] oracle.jdbc.OracleDriver@5d11346a
+[DEBUG] 2021-09-21 11:11:07,834 main            com.target.java.training.programs.ConnectToDBServer [  29] org.postgresql.Driver@223d2c72
+[DEBUG] 2021-09-21 11:11:07,878 main            com.target.java.training.programs.ConnectToDBServer [  35] Got an object of org.h2.jdbc.JdbcConnection
+[ERROR] 2021-09-21 11:44:25,781 main            com.target.java.training.programs.CreateTable [  29] There was an error
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE PRODUCTS 
+ID[*] INTEGER PRIMARY KEY,
+NAME VARCHAR(50) NOT NULL,
+PRICE DOUBLE
+  "; SQL statement:
+Create table products 
+id integer primary key,
+name varchar(50) not null,
+Price double
+  [42000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:203)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:548)
+	at org.h2.command.Parser.prepareCommand(Parser.java:281)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:271)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.prepare(CommandRemote.java:85)
+	at org.h2.command.CommandRemote.<init>(CommandRemote.java:51)
+	at org.h2.engine.SessionRemote.prepareCommand(SessionRemote.java:493)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.programs.CreateTable.main(CreateTable.java:24)
+[ERROR] 2021-09-21 11:44:42,979 main            com.target.java.training.programs.CreateTable [  29] There was an error
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE PRODUCTS 
+ID[*] INTEGER PRIMARY KEY,
+NAME VARCHAR(50) NOT NULL,
+PRICE DOUBLE
+ ; "; SQL statement:
+Create table products 
+id integer primary key,
+name varchar(50) not null,
+Price double
+ ; [42000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:203)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:548)
+	at org.h2.command.Parser.prepareCommand(Parser.java:281)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:271)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.prepare(CommandRemote.java:85)
+	at org.h2.command.CommandRemote.<init>(CommandRemote.java:51)
+	at org.h2.engine.SessionRemote.prepareCommand(SessionRemote.java:493)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.programs.CreateTable.main(CreateTable.java:24)
+[DEBUG] 2021-09-21 11:45:30,394 main            com.target.java.training.programs.CreateTable [  25] The SQL command was successfully executed in H@ server.
+[ERROR] 2021-09-21 11:45:38,037 main            com.target.java.training.programs.CreateTable [  29] There was an error
+org.h2.jdbc.JdbcSQLException: Table "PRODUCTS" already exists; SQL statement:
+Create table products(
+id integer primary key,
+name varchar(50) not null,
+Price double
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.programs.CreateTable.main(CreateTable.java:24)
+[DEBUG] 2021-09-21 12:30:54,171 main            com.target.java.training.programs.SqlInjectionSimulation [  20] select * from users where username = 'hema' and password = 'hemapriya'
+[DEBUG] 2021-09-21 12:31:10,498 main            com.target.java.training.programs.SqlInjectionSimulation [  20] select * from users where username = 'hema 1=1 --' and password = 'adhfgal'
+[DEBUG] 2021-09-21 12:38:46,957 main            com.target.java.training.programs.PrepareStatementDemo [  45] New Product added with id = 112, name = Mi Note 4 and price = 12500.0
+[DEBUG] 2021-09-21 12:41:45,109 main            com.target.java.training.programs.PrepareStatementDemo [  48] New Product added with id = 33, name = vinod 1=1 and price = 527389.0
+[DEBUG] 2021-09-21 12:46:25,613 main            com.target.java.training.programs.PrepareStatementDemo [  51] New Product added with id = 44, name = mi soundbar', 0) -- and price = 4500.0
+[DEBUG] 2021-09-21 21:33:40,881 main            com.target.java.training.assignment.entities.JdbcContactsDao [  47] The SQL command was successfully executed in H2 server.
+[ERROR] 2021-09-21 21:33:40,896 main            com.target.java.training.assignment.entities.JdbcContactsDao [  53] There was an error
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CONTACTS
+VALUES 
+(1, VENU, VELAGA, MALE, VENUGOPALARAOV@[*]GMAIL.COM, 9866366966, TENALI, GUNTUR, ANDHRA PRADESH, 222222, INDIA, STR_TO_DATE(’27-05-1968’, ‘%D-%M-%Y’),
+(2, KAVITHA, VELAGA, FEMALE, VELAGAKAVITHA@GMAIL.COM, 9866366566, SIRIPURAM, GUNTUR, ANDHRA PRADESH, 111111, INDIA, STR_TO_DATE(’14-11-1974’, ‘%D-%M-%Y’),
+(3, HEMA, PRIYA, FEMALE, HEMAPRIYAVELAGA@GMAIL.COM, 8500903254, KUKATPALLY, HYDERABAD, TELANGANA, 500072, INDIA, STR_TO_DATE(’20-11-1997’, ‘%D-%M-%Y’),
+(4, HIMA, BINDU, FEMALE, HIMABINDUVELAGA@GMAIL.COM, 8519848992, KPHB, HYDERABAD, TELANGANA, 500072, INDIA, STR_TO_DATE(’21-02-2005’, ‘%D-%M-%Y’);
+ "; expected "., (, [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO contacts
+VALUES 
+(1, Venu, Velaga, MALE, venugopalaraov@gmail.com, 9866366966, Tenali, Guntur, Andhra Pradesh, 222222, India, STR_TO_DATE(’27-05-1968’, ‘%d-%m-%Y’),
+(2, Kavitha, Velaga, FEMALE, velagakavitha@gmail.com, 9866366566, Siripuram, Guntur, Andhra Pradesh, 111111, India, STR_TO_DATE(’14-11-1974’, ‘%d-%m-%Y’),
+(3, Hema, Priya, FEMALE, hemapriyavelaga@gmail.com, 8500903254, Kukatpally, Hyderabad, Telangana, 500072, India, STR_TO_DATE(’20-11-1997’, ‘%d-%m-%Y’),
+(4, Hima, Bindu, FEMALE, himabinduvelaga@gmail.com, 8519848992, KPHB, Hyderabad, Telangana, 500072, India, STR_TO_DATE(’21-02-2005’, ‘%d-%m-%Y’);
+ [42001-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:217)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:555)
+	at org.h2.command.Parser.read(Parser.java:3518)
+	at org.h2.command.Parser.readIfMore(Parser.java:950)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1282)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:311)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:271)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.prepare(CommandRemote.java:85)
+	at org.h2.command.CommandRemote.<init>(CommandRemote.java:51)
+	at org.h2.engine.SessionRemote.prepareCommand(SessionRemote.java:493)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:48)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:21)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:14)
+[ERROR] 2021-09-21 21:35:25,723 main            com.target.java.training.assignment.entities.JdbcContactsDao [  53] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:46)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:21)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:14)
+[ERROR] 2021-09-21 21:36:19,330 main            com.target.java.training.assignment.entities.JdbcContactsDao [  53] There was an error
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CONTACTS
+VALUES 
+(1, VENU, VELAGA, MALE, VENUGOPAL@[*]GMAIL.COM, 9866366966, TENALI, GUNTUR, ANDHRA PRADESH, 222222, INDIA, STR_TO_DATE(’27-05-1968’, ‘%D-%M-%Y’),
+(2, KAVITHA, VELAGA, FEMALE, VELAGAKAVITHA@GMAIL.COM, 9866366566, SIRIPURAM, GUNTUR, ANDHRA PRADESH, 111111, INDIA, STR_TO_DATE(’14-11-1974’, ‘%D-%M-%Y’),
+(3, HEMA, PRIYA, FEMALE, HEMAPRIYAVELAGA@GMAIL.COM, 8500903254, KUKATPALLY, HYDERABAD, TELANGANA, 500072, INDIA, STR_TO_DATE(’20-11-1997’, ‘%D-%M-%Y’),
+(4, HIMA, BINDU, FEMALE, HIMABINDUVELAGA@GMAIL.COM, 8519848992, KPHB, HYDERABAD, TELANGANA, 500072, INDIA, STR_TO_DATE(’21-02-2005’, ‘%D-%M-%Y’);
+ "; expected "., (, [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO contacts
+VALUES 
+(1, Venu, Velaga, MALE, venugopal@gmail.com, 9866366966, Tenali, Guntur, Andhra Pradesh, 222222, India, STR_TO_DATE(’27-05-1968’, ‘%d-%m-%Y’),
+(2, Kavitha, Velaga, FEMALE, velagakavitha@gmail.com, 9866366566, Siripuram, Guntur, Andhra Pradesh, 111111, India, STR_TO_DATE(’14-11-1974’, ‘%d-%m-%Y’),
+(3, Hema, Priya, FEMALE, hemapriyavelaga@gmail.com, 8500903254, Kukatpally, Hyderabad, Telangana, 500072, India, STR_TO_DATE(’20-11-1997’, ‘%d-%m-%Y’),
+(4, Hima, Bindu, FEMALE, himabinduvelaga@gmail.com, 8519848992, KPHB, Hyderabad, Telangana, 500072, India, STR_TO_DATE(’21-02-2005’, ‘%d-%m-%Y’);
+ [42001-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:217)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:555)
+	at org.h2.command.Parser.read(Parser.java:3518)
+	at org.h2.command.Parser.readIfMore(Parser.java:950)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1282)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:311)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:271)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.prepare(CommandRemote.java:85)
+	at org.h2.command.CommandRemote.<init>(CommandRemote.java:51)
+	at org.h2.engine.SessionRemote.prepareCommand(SessionRemote.java:493)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:48)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:21)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:14)
+[ERROR] 2021-09-21 21:38:43,595 main            com.target.java.training.assignment.entities.JdbcContactsDao [  53] There was an error
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CONTACTS
+VALUES 
+(1, 'Venu', 'Velaga', 'MALE', 'venugopal@gmail.com', '9866366966', 'Tenali', 'Guntur', 'Andhra Pradesh', 222222, 'India', STR_TO_DATE([*]’27-05-1968’, ‘%D-%M-%Y’),
+(2, 'Kavitha', 'Velaga', 'FEMALE', 'velagakavitha@gmail.com', '9866366566', 'Siripuram', 'Guntur', 'Andhra Pradesh', 111111, 'India', STR_TO_DATE(’14-11-1974’, ‘%D-%M-%Y’),
+(3, 'Hema', 'Priya', 'FEMALE', 'hemapriyavelaga@gmail.com', '8500903254', 'Kukatpally', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’20-11-1997’, ‘%D-%M-%Y’),
+(4, 'Hima', 'Bindu', 'FEMALE', 'himabinduvelaga@gmail.com', '8519848992', 'KPHB', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’21-02-2005’, ‘%D-%M-%Y’);
+ "; SQL statement:
+INSERT INTO contacts
+VALUES 
+(1, 'Venu', 'Velaga', 'MALE', 'venugopal@gmail.com', '9866366966', 'Tenali', 'Guntur', 'Andhra Pradesh', 222222, 'India', STR_TO_DATE(’27-05-1968’, ‘%d-%m-%Y’),
+(2, 'Kavitha', 'Velaga', 'FEMALE', 'velagakavitha@gmail.com', '9866366566', 'Siripuram', 'Guntur', 'Andhra Pradesh', 111111, 'India', STR_TO_DATE(’14-11-1974’, ‘%d-%m-%Y’),
+(3, 'Hema', 'Priya', 'FEMALE', 'hemapriyavelaga@gmail.com', '8500903254', 'Kukatpally', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’20-11-1997’, ‘%d-%m-%Y’),
+(4, 'Hima', 'Bindu', 'FEMALE', 'himabinduvelaga@gmail.com', '8519848992', 'KPHB', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’21-02-2005’, ‘%d-%m-%Y’);
+ [42000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:203)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:548)
+	at org.h2.command.Parser.getSpecialType(Parser.java:4161)
+	at org.h2.command.Parser.read(Parser.java:3651)
+	at org.h2.command.Parser.readIf(Parser.java:3525)
+	at org.h2.command.Parser.readTerm(Parser.java:3101)
+	at org.h2.command.Parser.readFactor(Parser.java:2587)
+	at org.h2.command.Parser.readSum(Parser.java:2574)
+	at org.h2.command.Parser.readConcat(Parser.java:2544)
+	at org.h2.command.Parser.readCondition(Parser.java:2370)
+	at org.h2.command.Parser.readAnd(Parser.java:2342)
+	at org.h2.command.Parser.readExpression(Parser.java:2334)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1280)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:311)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:271)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.prepare(CommandRemote.java:85)
+	at org.h2.command.CommandRemote.<init>(CommandRemote.java:51)
+	at org.h2.engine.SessionRemote.prepareCommand(SessionRemote.java:493)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:48)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:21)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:14)
+[ERROR] 2021-09-21 21:39:50,165 main            com.target.java.training.assignment.entities.JdbcContactsDao [  53] There was an error
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CONTACTS
+VALUES 
+(1, 'Venu', 'Velaga', 'MALE', 'venugopal@gmail.com', '9866366966', 'Tenali', 'Guntur', 'Andhra Pradesh', 222222, 'India', STR_TO_DATE([*]’27-05-1968’, ‘%D-%M-%Y’),
+(2, 'Kavitha', 'Velaga', 'FEMALE', 'velagakavitha@gmail.com', '9866366566', 'Siripuram', 'Guntur', 'Andhra Pradesh', 111111, 'India', STR_TO_DATE(’14-11-1974’, ‘%D-%M-%Y’),
+(3, 'Hema', 'Priya', 'FEMALE', 'hemapriyavelaga@gmail.com', '8500903254', 'Kukatpally', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’20-11-1997’, ‘%D-%M-%Y’),
+(4, 'Hima', 'Bindu', 'FEMALE', 'himabinduvelaga@gmail.com', '8519848992', 'KPHB', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’21-02-2005’, ‘%D-%M-%Y’); "; SQL statement:
+INSERT INTO contacts
+VALUES 
+(1, 'Venu', 'Velaga', 'MALE', 'venugopal@gmail.com', '9866366966', 'Tenali', 'Guntur', 'Andhra Pradesh', 222222, 'India', STR_TO_DATE(’27-05-1968’, ‘%d-%m-%Y’),
+(2, 'Kavitha', 'Velaga', 'FEMALE', 'velagakavitha@gmail.com', '9866366566', 'Siripuram', 'Guntur', 'Andhra Pradesh', 111111, 'India', STR_TO_DATE(’14-11-1974’, ‘%d-%m-%Y’),
+(3, 'Hema', 'Priya', 'FEMALE', 'hemapriyavelaga@gmail.com', '8500903254', 'Kukatpally', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’20-11-1997’, ‘%d-%m-%Y’),
+(4, 'Hima', 'Bindu', 'FEMALE', 'himabinduvelaga@gmail.com', '8519848992', 'KPHB', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’21-02-2005’, ‘%d-%m-%Y’); [42000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:203)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:548)
+	at org.h2.command.Parser.getSpecialType(Parser.java:4161)
+	at org.h2.command.Parser.read(Parser.java:3651)
+	at org.h2.command.Parser.readIf(Parser.java:3525)
+	at org.h2.command.Parser.readTerm(Parser.java:3101)
+	at org.h2.command.Parser.readFactor(Parser.java:2587)
+	at org.h2.command.Parser.readSum(Parser.java:2574)
+	at org.h2.command.Parser.readConcat(Parser.java:2544)
+	at org.h2.command.Parser.readCondition(Parser.java:2370)
+	at org.h2.command.Parser.readAnd(Parser.java:2342)
+	at org.h2.command.Parser.readExpression(Parser.java:2334)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1280)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:311)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:271)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.prepare(CommandRemote.java:85)
+	at org.h2.command.CommandRemote.<init>(CommandRemote.java:51)
+	at org.h2.engine.SessionRemote.prepareCommand(SessionRemote.java:493)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:48)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:21)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:14)
+[ERROR] 2021-09-21 21:43:08,939 main            com.target.java.training.assignment.entities.JdbcContactsDao [  53] There was an error
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CONTACTS
+VALUES 
+	(1, 'Venu', 'Velaga', 'MALE', 'venugopal@gmail.com', '9866366966', 'Tenali', 'Guntur', 'Andhra Pradesh', 222222, 'India', STR_TO_DATE([*]’27-05-1968’, ‘%D-%M-%Y’)),
+	(2, 'Kavitha', 'Velaga', 'FEMALE', 'velagakavitha@gmail.com', '9866366566', 'Siripuram', 'Guntur', 'Andhra Pradesh', 111111, 'India', STR_TO_DATE(’14-11-1974’, ‘%D-%M-%Y’)),
+	(3, 'Hema', 'Priya', 'FEMALE', 'hemapriyavelaga@gmail.com', '8500903254', 'Kukatpally', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’20-11-1997’, ‘%D-%M-%Y’)),
+	(4, 'Hima', 'Bindu', 'FEMALE', 'himabinduvelaga@gmail.com', '8519848992', 'KPHB', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’21-02-2005’, ‘%D-%M-%Y’)); "; SQL statement:
+insert into contacts
+VALUES 
+	(1, 'Venu', 'Velaga', 'MALE', 'venugopal@gmail.com', '9866366966', 'Tenali', 'Guntur', 'Andhra Pradesh', 222222, 'India', STR_TO_DATE(’27-05-1968’, ‘%d-%m-%Y’)),
+	(2, 'Kavitha', 'Velaga', 'FEMALE', 'velagakavitha@gmail.com', '9866366566', 'Siripuram', 'Guntur', 'Andhra Pradesh', 111111, 'India', STR_TO_DATE(’14-11-1974’, ‘%d-%m-%Y’)),
+	(3, 'Hema', 'Priya', 'FEMALE', 'hemapriyavelaga@gmail.com', '8500903254', 'Kukatpally', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’20-11-1997’, ‘%d-%m-%Y’)),
+	(4, 'Hima', 'Bindu', 'FEMALE', 'himabinduvelaga@gmail.com', '8519848992', 'KPHB', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’21-02-2005’, ‘%d-%m-%Y’)); [42000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:203)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:548)
+	at org.h2.command.Parser.getSpecialType(Parser.java:4161)
+	at org.h2.command.Parser.read(Parser.java:3651)
+	at org.h2.command.Parser.readIf(Parser.java:3525)
+	at org.h2.command.Parser.readTerm(Parser.java:3101)
+	at org.h2.command.Parser.readFactor(Parser.java:2587)
+	at org.h2.command.Parser.readSum(Parser.java:2574)
+	at org.h2.command.Parser.readConcat(Parser.java:2544)
+	at org.h2.command.Parser.readCondition(Parser.java:2370)
+	at org.h2.command.Parser.readAnd(Parser.java:2342)
+	at org.h2.command.Parser.readExpression(Parser.java:2334)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1280)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:311)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:271)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.prepare(CommandRemote.java:85)
+	at org.h2.command.CommandRemote.<init>(CommandRemote.java:51)
+	at org.h2.engine.SessionRemote.prepareCommand(SessionRemote.java:493)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:48)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:21)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:14)
+[ERROR] 2021-09-21 21:47:27,593 main            com.target.java.training.assignment.entities.JdbcContactsDao [  51] There was an error
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CONTACTS VALUES (1, 'Venu', 'Velaga', 'MALE', 'venugopal@gmail.com', '9866366966', 'Tenali', 'Guntur', 'Andhra Pradesh', 222222, 'India', STR_TO_DATE([*]’27-05-1968’, ‘%D-%M-%Y’)),
+(2, 'Kavitha', 'Velaga', 'FEMALE', 'velagakavitha@gmail.com', '9866366566', 'Siripuram', 'Guntur', 'Andhra Pradesh', 111111, 'India', STR_TO_DATE(’14-11-1974’, ‘%D-%M-%Y’)),
+(3, 'Hema', 'Priya', 'FEMALE', 'hemapriyavelaga@gmail.com', '8500903254', 'Kukatpally', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’20-11-1997’, ‘%D-%M-%Y’)),
+(4, 'Hima', 'Bindu', 'FEMALE', 'himabinduvelaga@gmail.com', '8519848992', 'KPHB', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’21-02-2005’, ‘%D-%M-%Y’)); "; SQL statement:
+insert into contacts values (1, 'Venu', 'Velaga', 'MALE', 'venugopal@gmail.com', '9866366966', 'Tenali', 'Guntur', 'Andhra Pradesh', 222222, 'India', STR_TO_DATE(’27-05-1968’, ‘%d-%m-%Y’)),
+(2, 'Kavitha', 'Velaga', 'FEMALE', 'velagakavitha@gmail.com', '9866366566', 'Siripuram', 'Guntur', 'Andhra Pradesh', 111111, 'India', STR_TO_DATE(’14-11-1974’, ‘%d-%m-%Y’)),
+(3, 'Hema', 'Priya', 'FEMALE', 'hemapriyavelaga@gmail.com', '8500903254', 'Kukatpally', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’20-11-1997’, ‘%d-%m-%Y’)),
+(4, 'Hima', 'Bindu', 'FEMALE', 'himabinduvelaga@gmail.com', '8519848992', 'KPHB', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’21-02-2005’, ‘%d-%m-%Y’)); [42000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:203)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:548)
+	at org.h2.command.Parser.getSpecialType(Parser.java:4161)
+	at org.h2.command.Parser.read(Parser.java:3651)
+	at org.h2.command.Parser.readIf(Parser.java:3525)
+	at org.h2.command.Parser.readTerm(Parser.java:3101)
+	at org.h2.command.Parser.readFactor(Parser.java:2587)
+	at org.h2.command.Parser.readSum(Parser.java:2574)
+	at org.h2.command.Parser.readConcat(Parser.java:2544)
+	at org.h2.command.Parser.readCondition(Parser.java:2370)
+	at org.h2.command.Parser.readAnd(Parser.java:2342)
+	at org.h2.command.Parser.readExpression(Parser.java:2334)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1280)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:311)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:271)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.prepare(CommandRemote.java:85)
+	at org.h2.command.CommandRemote.<init>(CommandRemote.java:51)
+	at org.h2.engine.SessionRemote.prepareCommand(SessionRemote.java:493)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:46)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:21)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:14)
+[ERROR] 2021-09-21 21:50:08,460 main            com.target.java.training.assignment.entities.JdbcContactsDao [  57] There was an error
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "
+INSERT INTO CONTACTS VALUES (1, VENU, VELAGA, MALE, VENUGOPALARAOV@[*]GMAIL.COM, 9866366966, TENALI, GUNTUR, ANDHRA PRADESH, 222222, INDIA, STR_TO_DATE(’27-05-1968’, ‘%D-%M-%Y’)),(2, KAVITHA, VELAGA, FEMALE, VELAGAKAVITHA@GMAIL.COM, 9866366566, SIRIPURAM, GUNTUR, ANDHRA PRADESH, 111111, INDIA, STR_TO_DATE(’14-11-1974’, ‘%D-%M-%Y’)),(3, HEMA, PRIYA, FEMALE, HEMAPRIYAVELAGA@GMAIL.COM, 8500903254, KUKATPALLY, HYDERABAD, TELANGANA, 500072, INDIA, STR_TO_DATE(’20-11-1997’, ‘%D-%M-%Y’)),(4, HIMA, BINDU, FEMALE, HIMABINDUVELAGA@GMAIL.COM, 8519848992, KPHB, HYDERABAD, TELANGANA, 500072, INDIA, STR_TO_DATE(’21-02-2005’, ‘%D-%M-%Y’));
+ "; expected "., (, [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+
+INSERT INTO contacts VALUES (1, Venu, Velaga, MALE, venugopalaraov@gmail.com, 9866366966, Tenali, Guntur, Andhra Pradesh, 222222, India, STR_TO_DATE(’27-05-1968’, ‘%d-%m-%Y’)),(2, Kavitha, Velaga, FEMALE, velagakavitha@gmail.com, 9866366566, Siripuram, Guntur, Andhra Pradesh, 111111, India, STR_TO_DATE(’14-11-1974’, ‘%d-%m-%Y’)),(3, Hema, Priya, FEMALE, hemapriyavelaga@gmail.com, 8500903254, Kukatpally, Hyderabad, Telangana, 500072, India, STR_TO_DATE(’20-11-1997’, ‘%d-%m-%Y’)),(4, Hima, Bindu, FEMALE, himabinduvelaga@gmail.com, 8519848992, KPHB, Hyderabad, Telangana, 500072, India, STR_TO_DATE(’21-02-2005’, ‘%d-%m-%Y’));
+ [42001-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:217)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:555)
+	at org.h2.command.Parser.read(Parser.java:3518)
+	at org.h2.command.Parser.readIfMore(Parser.java:950)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1282)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:311)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:271)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.prepare(CommandRemote.java:85)
+	at org.h2.command.CommandRemote.<init>(CommandRemote.java:51)
+	at org.h2.engine.SessionRemote.prepareCommand(SessionRemote.java:493)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:52)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:21)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:14)
+[ERROR] 2021-09-21 21:50:41,474 main            com.target.java.training.assignment.entities.JdbcContactsDao [  57] There was an error
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "
+INSERT INTO CONTACTS VALUES (1, VENU, VELAGA, MALE, VENUGOPALARAOV@[*]GMAIL.COM, 9866366966, TENALI, GUNTUR, ANDHRA PRADESH, 222222, INDIA, STR_TO_DATE(’27-05-1968’, ‘%D-%M-%Y’)),(2, KAVITHA, VELAGA, FEMALE, VELAGAKAVITHA@GMAIL.COM, 9866366566, SIRIPURAM, GUNTUR, ANDHRA PRADESH, 111111, INDIA, STR_TO_DATE(’14-11-1974’, ‘%D-%M-%Y’)),(3, HEMA, PRIYA, FEMALE, HEMAPRIYAVELAGA@GMAIL.COM, 8500903254, KUKATPALLY, HYDERABAD, TELANGANA, 500072, INDIA, STR_TO_DATE(’20-11-1997’, ‘%D-%M-%Y’)),(4, HIMA, BINDU, FEMALE, HIMABINDUVELAGA@GMAIL.COM, 8519848992, KPHB, HYDERABAD, TELANGANA, 500072, INDIA, STR_TO_DATE(’21-02-2005’, ‘%D-%M-%Y’)); "; expected "., (, [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+
+INSERT INTO contacts VALUES (1, Venu, Velaga, MALE, venugopalaraov@gmail.com, 9866366966, Tenali, Guntur, Andhra Pradesh, 222222, India, STR_TO_DATE(’27-05-1968’, ‘%d-%m-%Y’)),(2, Kavitha, Velaga, FEMALE, velagakavitha@gmail.com, 9866366566, Siripuram, Guntur, Andhra Pradesh, 111111, India, STR_TO_DATE(’14-11-1974’, ‘%d-%m-%Y’)),(3, Hema, Priya, FEMALE, hemapriyavelaga@gmail.com, 8500903254, Kukatpally, Hyderabad, Telangana, 500072, India, STR_TO_DATE(’20-11-1997’, ‘%d-%m-%Y’)),(4, Hima, Bindu, FEMALE, himabinduvelaga@gmail.com, 8519848992, KPHB, Hyderabad, Telangana, 500072, India, STR_TO_DATE(’21-02-2005’, ‘%d-%m-%Y’)); [42001-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:217)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:555)
+	at org.h2.command.Parser.read(Parser.java:3518)
+	at org.h2.command.Parser.readIfMore(Parser.java:950)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1282)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:311)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:271)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.prepare(CommandRemote.java:85)
+	at org.h2.command.CommandRemote.<init>(CommandRemote.java:51)
+	at org.h2.engine.SessionRemote.prepareCommand(SessionRemote.java:493)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:52)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:21)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:14)
+[ERROR] 2021-09-21 21:51:36,194 main            com.target.java.training.assignment.entities.JdbcContactsDao [  56] There was an error
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CONTACTS VALUES (1, VENU, VELAGA, MALE, VENUGOPALARAOV@[*]GMAIL.COM, 9866366966, TENALI, GUNTUR, ANDHRA PRADESH, 222222, INDIA, STR_TO_DATE(’27-05-1968’, ‘%D-%M-%Y’)),(2, KAVITHA, VELAGA, FEMALE, VELAGAKAVITHA@GMAIL.COM, 9866366566, SIRIPURAM, GUNTUR, ANDHRA PRADESH, 111111, INDIA, STR_TO_DATE(’14-11-1974’, ‘%D-%M-%Y’)),(3, HEMA, PRIYA, FEMALE, HEMAPRIYAVELAGA@GMAIL.COM, 8500903254, KUKATPALLY, HYDERABAD, TELANGANA, 500072, INDIA, STR_TO_DATE(’20-11-1997’, ‘%D-%M-%Y’)),(4, HIMA, BINDU, FEMALE, HIMABINDUVELAGA@GMAIL.COM, 8519848992, KPHB, HYDERABAD, TELANGANA, 500072, INDIA, STR_TO_DATE(’21-02-2005’, ‘%D-%M-%Y’)); "; expected "., (, [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO contacts VALUES (1, Venu, Velaga, MALE, venugopalaraov@gmail.com, 9866366966, Tenali, Guntur, Andhra Pradesh, 222222, India, STR_TO_DATE(’27-05-1968’, ‘%d-%m-%Y’)),(2, Kavitha, Velaga, FEMALE, velagakavitha@gmail.com, 9866366566, Siripuram, Guntur, Andhra Pradesh, 111111, India, STR_TO_DATE(’14-11-1974’, ‘%d-%m-%Y’)),(3, Hema, Priya, FEMALE, hemapriyavelaga@gmail.com, 8500903254, Kukatpally, Hyderabad, Telangana, 500072, India, STR_TO_DATE(’20-11-1997’, ‘%d-%m-%Y’)),(4, Hima, Bindu, FEMALE, himabinduvelaga@gmail.com, 8519848992, KPHB, Hyderabad, Telangana, 500072, India, STR_TO_DATE(’21-02-2005’, ‘%d-%m-%Y’)); [42001-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:217)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:555)
+	at org.h2.command.Parser.read(Parser.java:3518)
+	at org.h2.command.Parser.readIfMore(Parser.java:950)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1282)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:311)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:271)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.prepare(CommandRemote.java:85)
+	at org.h2.command.CommandRemote.<init>(CommandRemote.java:51)
+	at org.h2.engine.SessionRemote.prepareCommand(SessionRemote.java:493)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:51)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:21)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:14)
+[ERROR] 2021-09-21 21:52:53,264 main            com.target.java.training.assignment.entities.JdbcContactsDao [  56] There was an error
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CONTACTS VALUES (1, 'Venu', 'Velaga', 'MALE', 'venugopal@gmail.com', '9866366966', 'Tenali', 'Guntur', 'Andhra Pradesh', 222222, 'India', STR_TO_DATE([*]’27-05-1968’, ‘%D-%M-%Y’)),
+(2, 'Kavitha', 'Velaga', 'FEMALE', 'velagakavitha@gmail.com', '9866366566', 'Siripuram', 'Guntur', 'Andhra Pradesh', 111111, 'India', STR_TO_DATE(’14-11-1974’, ‘%D-%M-%Y’)),
+(3, 'Hema', 'Priya', 'FEMALE', 'hemapriyavelaga@gmail.com', '8500903254', 'Kukatpally', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’20-11-1997’, ‘%D-%M-%Y’)),
+(4, 'Hima', 'Bindu', 'FEMALE', 'himabinduvelaga@gmail.com', '8519848992', 'KPHB', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’21-02-2005’, ‘%D-%M-%Y’)); "; SQL statement:
+insert into contacts values (1, 'Venu', 'Velaga', 'MALE', 'venugopal@gmail.com', '9866366966', 'Tenali', 'Guntur', 'Andhra Pradesh', 222222, 'India', STR_TO_DATE(’27-05-1968’, ‘%d-%m-%Y’)),
+(2, 'Kavitha', 'Velaga', 'FEMALE', 'velagakavitha@gmail.com', '9866366566', 'Siripuram', 'Guntur', 'Andhra Pradesh', 111111, 'India', STR_TO_DATE(’14-11-1974’, ‘%d-%m-%Y’)),
+(3, 'Hema', 'Priya', 'FEMALE', 'hemapriyavelaga@gmail.com', '8500903254', 'Kukatpally', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’20-11-1997’, ‘%d-%m-%Y’)),
+(4, 'Hima', 'Bindu', 'FEMALE', 'himabinduvelaga@gmail.com', '8519848992', 'KPHB', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’21-02-2005’, ‘%d-%m-%Y’)); [42000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:203)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:548)
+	at org.h2.command.Parser.getSpecialType(Parser.java:4161)
+	at org.h2.command.Parser.read(Parser.java:3651)
+	at org.h2.command.Parser.readIf(Parser.java:3525)
+	at org.h2.command.Parser.readTerm(Parser.java:3101)
+	at org.h2.command.Parser.readFactor(Parser.java:2587)
+	at org.h2.command.Parser.readSum(Parser.java:2574)
+	at org.h2.command.Parser.readConcat(Parser.java:2544)
+	at org.h2.command.Parser.readCondition(Parser.java:2370)
+	at org.h2.command.Parser.readAnd(Parser.java:2342)
+	at org.h2.command.Parser.readExpression(Parser.java:2334)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1280)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:311)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:271)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.prepare(CommandRemote.java:85)
+	at org.h2.command.CommandRemote.<init>(CommandRemote.java:51)
+	at org.h2.engine.SessionRemote.prepareCommand(SessionRemote.java:493)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:51)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:21)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:14)
+[ERROR] 2021-09-21 21:55:48,682 main            com.target.java.training.assignment.entities.JdbcContactsDao [  56] There was an error
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CONTACTS VALUES (1, 'Venu', 'Velaga', 'MALE', 'venugopal@gmail.com', '9866366966', 'Tenali', 'Guntur', 'Andhra Pradesh', 222222, 'India', STR_TO_DATE([*]’27-05-1968’, ‘%D-%M-%Y’)),
+(2, 'Kavitha', 'Velaga', 'FEMALE', 'velagakavitha@gmail.com', '9866366566', 'Siripuram', 'Guntur', 'Andhra Pradesh', 111111, 'India', STR_TO_DATE(’14-11-1974’, ‘%D-%M-%Y’)),
+(3, 'Hema', 'Priya', 'FEMALE', 'hemapriyavelaga@gmail.com', '8500903254', 'Kukatpally', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’20-11-1997’, ‘%D-%M-%Y’)),
+(4, 'Hima', 'Bindu', 'FEMALE', 'himabinduvelaga@gmail.com', '8519848992', 'KPHB', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’21-02-2005’, ‘%D-%M-%Y’)) "; SQL statement:
+insert into contacts values (1, 'Venu', 'Velaga', 'MALE', 'venugopal@gmail.com', '9866366966', 'Tenali', 'Guntur', 'Andhra Pradesh', 222222, 'India', STR_TO_DATE(’27-05-1968’, ‘%d-%m-%Y’)),
+(2, 'Kavitha', 'Velaga', 'FEMALE', 'velagakavitha@gmail.com', '9866366566', 'Siripuram', 'Guntur', 'Andhra Pradesh', 111111, 'India', STR_TO_DATE(’14-11-1974’, ‘%d-%m-%Y’)),
+(3, 'Hema', 'Priya', 'FEMALE', 'hemapriyavelaga@gmail.com', '8500903254', 'Kukatpally', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’20-11-1997’, ‘%d-%m-%Y’)),
+(4, 'Hima', 'Bindu', 'FEMALE', 'himabinduvelaga@gmail.com', '8519848992', 'KPHB', 'Hyderabad', 'Telangana', 500072, 'India', STR_TO_DATE(’21-02-2005’, ‘%d-%m-%Y’)) [42000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:203)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:548)
+	at org.h2.command.Parser.getSpecialType(Parser.java:4161)
+	at org.h2.command.Parser.read(Parser.java:3651)
+	at org.h2.command.Parser.readIf(Parser.java:3525)
+	at org.h2.command.Parser.readTerm(Parser.java:3101)
+	at org.h2.command.Parser.readFactor(Parser.java:2587)
+	at org.h2.command.Parser.readSum(Parser.java:2574)
+	at org.h2.command.Parser.readConcat(Parser.java:2544)
+	at org.h2.command.Parser.readCondition(Parser.java:2370)
+	at org.h2.command.Parser.readAnd(Parser.java:2342)
+	at org.h2.command.Parser.readExpression(Parser.java:2334)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1280)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:311)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:271)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.prepare(CommandRemote.java:85)
+	at org.h2.command.CommandRemote.<init>(CommandRemote.java:51)
+	at org.h2.engine.SessionRemote.prepareCommand(SessionRemote.java:493)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:51)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:21)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:14)
+[DEBUG] 2021-09-21 21:58:33,400 main            com.target.java.training.assignment.entities.JdbcContactsDao [  52] Contacts table has been created with 4 initial contacts.
+[ERROR] 2021-09-21 22:00:18,830 main            com.target.java.training.assignment.entities.JdbcContactsDao [  52] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:45)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:21)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:14)
+[ERROR] 2021-09-21 22:15:31,233 main            com.target.java.training.assignment.entities.JdbcContactsDao [  55] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:48)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:21)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:14)
+[DEBUG] 2021-09-21 22:16:22,092 main            com.target.java.training.assignment.entities.JdbcContactsDao [ 105] New Product added with id = 5, firstname = Pucha and lastname = Rohan
+[ERROR] 2021-09-21 22:55:00,420 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:21)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:14)
+[ERROR] 2021-09-21 23:10:09,007 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:21)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:14)
+[ERROR] 2021-09-21 23:18:09,628 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[DEBUG] 2021-09-21 23:18:28,880 main            com.target.java.training.assignment.entities.JdbcContactsDao [ 200] Error while displaying contacts!Column "FROM_DATE" not found; SQL statement:
+SELECT * FROM contacts WHERE From_date >= '1997-11-19' AND To_date <= '2005-02-22' [42122-197]
+[ERROR] 2021-09-21 23:20:58,326 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ERROR] 2021-09-21 23:31:30,830 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[DEBUG] 2021-09-21 23:32:14,771 main            com.target.java.training.assignment.entities.JdbcContactsDao [ 165] Error while displaying contacts!Column "HYDERABAD" not found; SQL statement:
+SELECT * FROM contacts WHERE city = Hyderabad [42122-197]
+[ERROR] 2021-09-21 23:32:42,641 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ERROR] 2021-09-21 23:33:26,388 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ERROR] 2021-09-21 23:34:24,904 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ERROR] 2021-09-21 23:35:42,009 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ERROR] 2021-09-21 23:36:37,921 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ERROR] 2021-09-21 23:39:09,303 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[DEBUG] 2021-09-21 23:39:18,450 main            com.target.java.training.assignment.entities.JdbcContactsDao [ 167] Error while deleting contacts!Method is only allowed for a query. Use execute or executeUpdate instead of executeQuery; SQL statement:
+DELETE FROM products WHERE id = 5; [90002-197]
+[ERROR] 2021-09-21 23:40:37,388 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ERROR] 2021-09-21 23:41:20,572 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[DEBUG] 2021-09-21 23:41:24,818 main            com.target.java.training.assignment.entities.JdbcContactsDao [ 167] Error while deleting contacts!Method is only allowed for a query. Use execute or executeUpdate instead of executeQuery; SQL statement:
+DELETE FROM contacts WHERE id = 5; [90002-197]
+[ERROR] 2021-09-21 23:44:52,042 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ERROR] 2021-09-21 23:51:01,690 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ERROR] 2021-09-21 23:52:33,827 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ERROR] 2021-09-21 23:53:43,295 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ERROR] 2021-09-21 23:54:24,589 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ WARN] 2021-09-21 23:55:34,852 main            com.target.java.training.assignment.entities.JdbcContactsDao [ 195] There was an error - Data conversion error converting "1997-11-20"; SQL statement:
+UPDATE contacts SET firstname=?, lastname = ?, gender = ?, email = ?, phone =?, address = ?, city = ?, state = ?, pincode = ?, country = ?, birthdate =?  WHERE id=?; [22018-197]
+[ERROR] 2021-09-22 00:00:19,841 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ERROR] 2021-09-22 00:00:45,575 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ERROR] 2021-09-22 00:02:24,694 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ERROR] 2021-09-22 00:03:09,369 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ERROR] 2021-09-22 00:03:58,569 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ERROR] 2021-09-22 00:04:10,955 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ERROR] 2021-09-22 00:05:17,944 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ERROR] 2021-09-22 00:06:06,400 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ERROR] 2021-09-22 00:06:25,791 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ WARN] 2021-09-22 00:07:14,274 main            com.target.java.training.assignment.entities.JdbcContactsDao [ 195] There was an error - Data conversion error converting "1997-11-20"; SQL statement:
+UPDATE contacts SET firstname=?, lastname = ?, gender = ?, email = ?, phone =?, address = ?, city = ?, state = ?, pincode = ?, country = ?, birthdate =?  WHERE id=?; [22018-197]
+[ERROR] 2021-09-22 00:08:09,042 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ WARN] 2021-09-22 00:08:39,705 main            com.target.java.training.assignment.entities.JdbcContactsDao [ 195] There was an error - Invalid value "12" for parameter "parameterIndex" [90008-197]
+[ERROR] 2021-09-22 00:09:59,000 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ WARN] 2021-09-22 00:10:34,560 main            com.target.java.training.assignment.entities.JdbcContactsDao [ 195] There was an error - Invalid value "12" for parameter "parameterIndex" [90008-197]
+[ERROR] 2021-09-22 00:11:40,164 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[ WARN] 2021-09-22 00:12:09,133 main            com.target.java.training.assignment.entities.JdbcContactsDao [ 195] There was an error - Invalid value "12" for parameter "parameterIndex" [90008-197]
+[ERROR] 2021-09-22 00:13:24,670 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[DEBUG] 2021-09-22 00:13:53,198 main            com.target.java.training.assignment.entities.JdbcContactsDao [ 192] Contact with id = 3, firstname = Hema and lastname = Velaga has been updated!
+[DEBUG] 2021-09-22 00:14:54,125 main            com.target.java.training.assignment.entities.JdbcContactsDao [ 192] Contact with id = 3, firstname = Hema Priya and lastname = Velaga has been updated!
+[DEBUG] 2021-09-22 00:17:08,779 main            com.target.java.training.assignment.entities.JdbcContactsDao [ 192] Contact with id = 3, firstname = Hema Priya and lastname = Velaga has been updated!
+[ERROR] 2021-09-22 00:18:07,582 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[DEBUG] 2021-09-22 00:18:50,801 main            com.target.java.training.assignment.entities.JdbcContactsDao [ 192] Contact with id = 3, firstname = Hema Priya and lastname = Velaga has been updated!
+[DEBUG] 2021-09-22 00:19:44,830 main            com.target.java.training.assignment.entities.JdbcContactsDao [ 104] New Product added with id = 5, firstname = Rohan and lastname = Pucha
+[ERROR] 2021-09-22 10:48:10,459 main            com.target.java.training.programs.CreateTable [  29] There was an error
+java.sql.SQLSyntaxErrorException: Table 'products' already exists
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:764)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.target.java.training.programs.CreateTable.main(CreateTable.java:24)
+[ERROR] 2021-09-22 11:04:42,622 main            com.target.java.training.programs.CreateTable [  29] There was an error
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:2345/target_training_db
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:702)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at com.target.java.training.utils.DbUtil.createConnection(DbUtil.java:21)
+	at com.target.java.training.programs.CreateTable.main(CreateTable.java:20)
+[ERROR] 2021-09-22 11:05:13,061 main            com.target.java.training.programs.CreateTable [  29] There was an error
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:2345/target_training_db
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:702)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at com.target.java.training.utils.DbUtil.createConnection(DbUtil.java:21)
+	at com.target.java.training.programs.CreateTable.main(CreateTable.java:20)
+[ERROR] 2021-09-22 11:08:01,886 main            com.target.java.training.programs.CreateTable [  29] There was an error
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:2345/target_training_db
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:702)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at com.target.java.training.utils.DbUtil.createConnection(DbUtil.java:21)
+	at com.target.java.training.programs.CreateTable.main(CreateTable.java:20)
+[ERROR] 2021-09-22 11:10:33,375 main            com.target.java.training.programs.CreateTable [  29] There was an error
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:2345/target_training_db
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:702)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at com.target.java.training.utils.DbUtil.createConnection(DbUtil.java:21)
+	at com.target.java.training.programs.CreateTable.main(CreateTable.java:20)
+[DEBUG] 2021-09-22 11:11:31,256 main            com.target.java.training.programs.ConnectToDBServer [  28] These are the registered JDBC drivers in DriverManager
+[DEBUG] 2021-09-22 11:11:31,375 main            com.target.java.training.programs.ConnectToDBServer [  29] org.h2.Driver@a74868d
+[DEBUG] 2021-09-22 11:11:31,375 main            com.target.java.training.programs.ConnectToDBServer [  29] com.mysql.cj.jdbc.Driver@77846d2c
+[DEBUG] 2021-09-22 11:12:01,870 main            com.target.java.training.programs.ConnectToDBServer [  28] These are the registered JDBC drivers in DriverManager
+[DEBUG] 2021-09-22 11:12:01,991 main            com.target.java.training.programs.ConnectToDBServer [  29] org.h2.Driver@a74868d
+[DEBUG] 2021-09-22 11:12:01,991 main            com.target.java.training.programs.ConnectToDBServer [  29] com.mysql.cj.jdbc.Driver@77846d2c
+[DEBUG] 2021-09-22 11:12:41,870 main            com.target.java.training.programs.ConnectToDBServer [  28] These are the registered JDBC drivers in DriverManager
+[DEBUG] 2021-09-22 11:12:41,990 main            com.target.java.training.programs.ConnectToDBServer [  29] org.h2.Driver@a74868d
+[DEBUG] 2021-09-22 11:12:41,991 main            com.target.java.training.programs.ConnectToDBServer [  29] com.mysql.cj.jdbc.Driver@77846d2c
+[DEBUG] 2021-09-22 11:13:16,644 main            com.target.java.training.programs.ConnectToDBServer [  28] These are the registered JDBC drivers in DriverManager
+[DEBUG] 2021-09-22 11:13:16,687 main            com.target.java.training.programs.ConnectToDBServer [  29] org.h2.Driver@1fc2b765
+[DEBUG] 2021-09-22 11:13:16,688 main            com.target.java.training.programs.ConnectToDBServer [  29] com.mysql.cj.jdbc.Driver@4d1b0d2a
+[DEBUG] 2021-09-22 11:13:16,688 main            com.target.java.training.programs.ConnectToDBServer [  29] org.postgresql.Driver@6366ebe0
+[ERROR] 2021-09-22 11:13:40,610 main            com.target.java.training.programs.CreateTable [  29] There was an error
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "root"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:613)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:161)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:465)
+	at org.postgresql.Driver.connect(Driver.java:264)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at com.target.java.training.utils.DbUtil.createConnection(DbUtil.java:21)
+	at com.target.java.training.programs.CreateTable.main(CreateTable.java:20)
+[ERROR] 2021-09-22 11:13:59,032 main            com.target.java.training.programs.CreateTable [  29] There was an error
+org.postgresql.util.PSQLException: ERROR: type "double" does not exist
+  Position: 81
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279)
+	at com.target.java.training.programs.CreateTable.main(CreateTable.java:24)
+[DEBUG] 2021-09-22 11:14:10,878 main            com.target.java.training.programs.CreateTable [  25] The SQL command was successfully executed in H@ server.
+[DEBUG] 2021-09-22 11:15:41,042 main            com.target.java.training.programs.PrepareStatementDemo [  51] New Product added with id = 1, name = Macbook Pro and price = 300000.0
+[DEBUG] 2021-09-22 11:16:02,835 main            com.target.java.training.programs.PrepareStatementDemo [  51] New Product added with id = 2, name = plantronics bluetooth headset and price = 25000.0
+[DEBUG] 2021-09-22 11:16:20,231 main            com.target.java.training.programs.PrepareStatementDemo [  51] New Product added with id = 3, name = logitech mouse and price = 1500.0
+[DEBUG] 2021-09-22 11:17:32,078 main            com.target.java.training.programs.PrepareStatementDemo [  51] New Product added with id = 1, name = Vu Tv and price = 23000.0
+[DEBUG] 2021-09-22 11:17:49,095 main            com.target.java.training.programs.PrepareStatementDemo [  51] New Product added with id = 2, name = Poco M3 Pro and price = 14500.0
+[DEBUG] 2021-09-22 11:18:06,468 main            com.target.java.training.programs.PrepareStatementDemo [  51] New Product added with id = 3, name = Oppo F11 Pro and price = 13500.0
+[DEBUG] 2021-09-22 11:43:12,626 main            com.target.java.training.programs.GetAllProducts [  30] id = {}, name = {}, price = {}
+[DEBUG] 2021-09-22 11:44:20,917 main            com.target.java.training.programs.GetAllProducts [  31] id = 1, name = Vu Tv, price = 23000.0
+[DEBUG] 2021-09-22 11:44:20,919 main            com.target.java.training.programs.GetAllProducts [  31] id = 2, name = Poco M3 Pro, price = 14500.0
+[DEBUG] 2021-09-22 11:44:20,919 main            com.target.java.training.programs.GetAllProducts [  31] id = 3, name = Oppo F11 Pro, price = 13500.0
+[DEBUG] 2021-09-22 11:44:54,314 main            com.target.java.training.programs.GetAllProducts [  31] id = 1, name = Macbook Pro, price = 300000.0
+[DEBUG] 2021-09-22 11:44:54,316 main            com.target.java.training.programs.GetAllProducts [  31] id = 2, name = plantronics bluetooth headset, price = 25000.0
+[DEBUG] 2021-09-22 11:44:54,316 main            com.target.java.training.programs.GetAllProducts [  31] id = 3, name = logitech mouse, price = 1500.0
+[DEBUG] 2021-09-22 11:46:22,469 main            com.target.java.training.programs.GetAllProducts [  31] id = 1, name = ipad mini, price = 45000.0
+[DEBUG] 2021-09-22 11:46:22,471 main            com.target.java.training.programs.GetAllProducts [  31] id = 2, name = mi soundbar, price = 0.0
+[DEBUG] 2021-09-22 11:46:22,471 main            com.target.java.training.programs.GetAllProducts [  31] id = 12, name = Apple Magic Mouse, price = 8500.0
+[DEBUG] 2021-09-22 11:46:22,471 main            com.target.java.training.programs.GetAllProducts [  31] id = 29, name = Airpods, price = 12500.0
+[DEBUG] 2021-09-22 11:46:22,471 main            com.target.java.training.programs.GetAllProducts [  31] id = 33, name = vinod 1=1, price = 527389.0
+[DEBUG] 2021-09-22 11:46:22,471 main            com.target.java.training.programs.GetAllProducts [  31] id = 44, name = mi soundbar', 0) --, price = 4500.0
+[DEBUG] 2021-09-22 11:46:22,472 main            com.target.java.training.programs.GetAllProducts [  31] id = 89, name = Apple Pencil, price = 8500.0
+[DEBUG] 2021-09-22 11:46:22,472 main            com.target.java.training.programs.GetAllProducts [  31] id = 112, name = Mi Note 4, price = 12500.0
+[ERROR] 2021-09-22 11:59:37,051 main            com.target.java.training.programs.GetProductByID [  38] Error while retrieving the record!This method is not allowed for a prepared statement; use a regular statement instead. [90130-197]
+[ERROR] 2021-09-22 12:00:57,503 main            com.target.java.training.programs.GetProductByID [  45] Error while accessing dataThis method is not allowed for a prepared statement; use a regular statement instead. [90130-197]
+[DEBUG] 2021-09-22 12:02:21,640 main            com.target.java.training.programs.GetProductByID [  30] id = 1, name = ipad mini, price = 45000.0
+[ WARN] 2021-09-22 12:02:31,732 main            com.target.java.training.programs.GetProductByID [  37] No product found for this id 300!
+[ WARN] 2021-09-22 12:02:49,104 main            com.target.java.training.programs.GetProductByID [  37] No product found for id = 22!
+[DEBUG] 2021-09-25 20:10:21,248 main            com.target.java.training.programs.SqlInjectionSimulation [  20] select * from users where username = 'hema' and password = 'hemapriya'
+[DEBUG] 2021-09-25 20:10:48,703 main            com.target.java.training.programs.SqlInjectionSimulation [  20] select * from users where username = 'hema 1=1' and password = 'kajdshvgla'
+[DEBUG] 2021-09-25 20:11:04,066 main            com.target.java.training.programs.SqlInjectionSimulation [  20] select * from users where username = 'hema' and password = 'dkgjhasdg'
+[ WARN] 2021-09-25 20:17:09,626 main            com.target.java.training.programs.AddProductRecords [  33] There was an error - Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.PRODUCTS(ID)"; SQL statement:
+insert into products values('33', 'Mi Note 7', '3000.000000') [23505-197]
+[ WARN] 2021-09-25 20:18:56,514 main            com.target.java.training.programs.AddProductRecords [  33] There was an error - Syntax error in SQL statement "insert into products values('666', 'Iphone' , 0', '50000.000000[*]')"; SQL statement:
+insert into products values('666', 'Iphone' , 0', '50000.000000') [42000-197]
+[DEBUG] 2021-09-25 20:23:10,860 main            com.target.java.training.programs.PrepareStatementDemo [  51] New Product added with id = 456, name = "mi sound bar', 200) --" and price = 5000.0
+[DEBUG] 2021-09-25 20:31:35,104 main            com.target.java.training.programs.GetAllProducts [  31] id = 1, name = ipad mini, price = 45000.0
+[DEBUG] 2021-09-25 20:31:35,107 main            com.target.java.training.programs.GetAllProducts [  31] id = 2, name = mi soundbar, price = 0.0
+[DEBUG] 2021-09-25 20:31:35,107 main            com.target.java.training.programs.GetAllProducts [  31] id = 12, name = Apple Magic Mouse, price = 8500.0
+[DEBUG] 2021-09-25 20:31:35,107 main            com.target.java.training.programs.GetAllProducts [  31] id = 29, name = Airpods, price = 12500.0
+[DEBUG] 2021-09-25 20:31:35,107 main            com.target.java.training.programs.GetAllProducts [  31] id = 33, name = vinod 1=1, price = 527389.0
+[DEBUG] 2021-09-25 20:31:35,108 main            com.target.java.training.programs.GetAllProducts [  31] id = 44, name = mi soundbar', 0) --, price = 4500.0
+[DEBUG] 2021-09-25 20:31:35,108 main            com.target.java.training.programs.GetAllProducts [  31] id = 89, name = Apple Pencil, price = 8500.0
+[DEBUG] 2021-09-25 20:31:35,108 main            com.target.java.training.programs.GetAllProducts [  31] id = 111, name = Mi Note 7, price = 3000.0
+[DEBUG] 2021-09-25 20:31:35,110 main            com.target.java.training.programs.GetAllProducts [  31] id = 112, name = Mi Note 4, price = 12500.0
+[DEBUG] 2021-09-25 20:31:35,110 main            com.target.java.training.programs.GetAllProducts [  31] id = 234, name = "Macbook Air 8th Gen, price = 0.0
+[DEBUG] 2021-09-25 20:31:35,110 main            com.target.java.training.programs.GetAllProducts [  31] id = 456, name = "mi sound bar', 200) --", price = 5000.0
+[DEBUG] 2021-09-25 20:31:35,110 main            com.target.java.training.programs.GetAllProducts [  31] id = 656, name = "Motorola, price = 200.0
+[DEBUG] 2021-09-25 20:31:35,110 main            com.target.java.training.programs.GetAllProducts [  31] id = 666, name = Iphone, 0) --, price = 50000.0
+[ERROR] 2021-09-25 20:40:07,378 main            com.target.java.training.programs.CreateTable [  29] There was an error
+org.h2.jdbc.JdbcSQLException: Table "PRODUCTS" already exists; SQL statement:
+Create table products(
+id integer primary key,
+name varchar(50) not null,
+Price decimal
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.programs.CreateTable.main(CreateTable.java:24)
+[DEBUG] 2021-09-25 20:42:40,929 main            com.target.java.training.programs.GetProductByID [  30] id = 33, name = vinod 1=1, price = 527389.0
+[ WARN] 2021-09-25 20:44:06,777 main            com.target.java.training.programs.GetProductByID [  37] No product found for id = 123456!
+[ERROR] 2021-09-25 21:01:02,598 main            com.target.java.training.assignment.entities.JdbcContactsDao [  54] There was an error
+org.h2.jdbc.JdbcSQLException: Table "CONTACTS" already exists; SQL statement:
+Create table contacts(
+id integer primary key,
+firstname varchar(50) not null,
+lastname varchar(50) not null,
+gender varchar(50) not null,
+email varchar(50) not null,
+phone varchar(50) not null,
+address varchar(50) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+pincode integer not null,
+country varchar(50) not null,
+birthDate date not null
+); [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.java.training.assignment.entities.JdbcContactsDao.<init>(JdbcContactsDao.java:47)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:37)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:19)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:13)
+[DEBUG] 2021-09-25 21:02:32,455 main            com.target.java.training.assignment.entities.JdbcContactsDao [  48] The SQL command was successfully executed in H2 server.
+[DEBUG] 2021-09-25 21:02:32,464 main            com.target.java.training.assignment.entities.JdbcContactsDao [  50] Contacts table has been created with 4 initial contacts.
+[DEBUG] 2021-09-25 21:04:25,955 main            com.target.java.training.assignment.entities.JdbcContactsDao [  48] The SQL command was successfully executed in H2 server.
+[DEBUG] 2021-09-25 21:04:25,960 main            com.target.java.training.assignment.entities.JdbcContactsDao [  50] Contacts table has been created with 4 initial contacts.
+[DEBUG] 2021-09-27 09:36:34,791 main            com.target.java.training.dao.JdbcProductDao [  64] Error while displaying contacts!Column 'name' not found.
+[DEBUG] 2021-09-27 09:49:56,589 main            com.target.java.training.dao.JdbcProductDao [  64] Error while displaying contacts!Column 'name' not found.
+[DEBUG] 2021-09-27 22:06:52,106 main            org.jboss.logging [  38] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[DEBUG] 2021-09-27 22:06:52,356 main            org.hibernate.jpa.HibernatePersistenceProvider [  88] Located and parsed 1 persistence units; checking each
+[DEBUG] 2021-09-27 22:06:52,358 main            org.hibernate.jpa.HibernatePersistenceProvider [  96] Checking persistence-unit [name=TRAINING, explicit-provider=org.hibernate.jpa.HibernatePersistenceProvider] against incoming persistence unit name [TRAINING]
+[DEBUG] 2021-09-27 22:06:52,360 main            org.hibernate.jpa.boot.spi.ProviderChecker [  85] Persistence-unit [TRAINING] requested PersistenceProvider [org.hibernate.jpa.HibernatePersistenceProvider]
+[DEBUG] 2021-09-27 22:06:52,372 main            org.hibernate.jpa.internal.util.LogHelper [ 102] PersistenceUnitInfo [
+	name: TRAINING
+	persistence provider classname: org.hibernate.jpa.HibernatePersistenceProvider
+	classloader: null
+	excludeUnlistedClasses: false
+	JTA datasource: null
+	Non JTA datasource: null
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/Users/Z0084MD/Desktop/java-training/day-07-factory-jdbc/target/classes/
+	Shared Cache Mode: null
+	Validation Mode: null
+	Jar files URLs []
+	Managed classes names []
+	Mapping files names []
+	Properties [
+		javax.persistence.jdbc.driver: com.mysql.cj.jdbc.Driver
+		javax.persistence.jdbc.password: hemapriya
+		hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
+		javax.persistence.jdbc.url: jdbc:mysql://localhost/target_training_db?createDatabaseIfNotExist=true
+		hibernate.show_sql: true
+		hibernate.hbm2ddl.auto: update
+		hibernate.format_sql: true
+		javax.persistence.jdbc.user: root]
+[DEBUG] 2021-09-27 22:06:52,379 main            org.hibernate.integrator.internal.IntegratorServiceImpl [  46] Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2021-09-27 22:06:52,383 main            org.hibernate.integrator.internal.IntegratorServiceImpl [  46] Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[DEBUG] 2021-09-27 22:06:52,389 main            org.hibernate.integrator.internal.IntegratorServiceImpl [  46] Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[ INFO] 2021-09-27 22:06:52,469 main            org.hibernate.Version [  44] HHH000412: Hibernate ORM core version 5.5.7.Final
+[DEBUG] 2021-09-27 22:06:52,471 main            org.hibernate.cfg.Environment [ 199] HHH000206: hibernate.properties not found
+[DEBUG] 2021-09-27 22:06:52,626 main            org.hibernate.service.spi.ServiceBinding [  68] Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+[DEBUG] 2021-09-27 22:06:52,638 main            org.hibernate.cache.internal.RegionFactoryInitiator [ 118] Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+[DEBUG] 2021-09-27 22:06:52,640 main            org.hibernate.cache.internal.RegionFactoryInitiator [  49] Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[ INFO] 2021-09-27 22:06:52,660 main            org.hibernate.annotations.common.Version [  56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[DEBUG] 2021-09-27 22:06:52,694 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration boolean -> org.hibernate.type.BooleanType@539d019
+[DEBUG] 2021-09-27 22:06:52,695 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration boolean -> org.hibernate.type.BooleanType@539d019
+[DEBUG] 2021-09-27 22:06:52,696 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@539d019
+[DEBUG] 2021-09-27 22:06:52,696 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@4426bff1
+[DEBUG] 2021-09-27 22:06:52,697 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration true_false -> org.hibernate.type.TrueFalseType@6b88ca8c
+[DEBUG] 2021-09-27 22:06:52,697 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration yes_no -> org.hibernate.type.YesNoType@19e4fcac
+[DEBUG] 2021-09-27 22:06:52,698 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration byte -> org.hibernate.type.ByteType@65a15628
+[DEBUG] 2021-09-27 22:06:52,698 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration byte -> org.hibernate.type.ByteType@65a15628
+[DEBUG] 2021-09-27 22:06:52,698 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@65a15628
+[DEBUG] 2021-09-27 22:06:52,699 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration character -> org.hibernate.type.CharacterType@740d2e78
+[DEBUG] 2021-09-27 22:06:52,699 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration char -> org.hibernate.type.CharacterType@740d2e78
+[DEBUG] 2021-09-27 22:06:52,699 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@740d2e78
+[DEBUG] 2021-09-27 22:06:52,700 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration short -> org.hibernate.type.ShortType@29a0cdb
+[DEBUG] 2021-09-27 22:06:52,700 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration short -> org.hibernate.type.ShortType@29a0cdb
+[DEBUG] 2021-09-27 22:06:52,700 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.lang.Short -> org.hibernate.type.ShortType@29a0cdb
+[DEBUG] 2021-09-27 22:06:52,701 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration integer -> org.hibernate.type.IntegerType@4ed5eb72
+[DEBUG] 2021-09-27 22:06:52,701 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration int -> org.hibernate.type.IntegerType@4ed5eb72
+[DEBUG] 2021-09-27 22:06:52,701 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@4ed5eb72
+[DEBUG] 2021-09-27 22:06:52,702 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration long -> org.hibernate.type.LongType@1921ad94
+[DEBUG] 2021-09-27 22:06:52,702 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration long -> org.hibernate.type.LongType@1921ad94
+[DEBUG] 2021-09-27 22:06:52,703 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.lang.Long -> org.hibernate.type.LongType@1921ad94
+[DEBUG] 2021-09-27 22:06:52,703 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration float -> org.hibernate.type.FloatType@8ad6665
+[DEBUG] 2021-09-27 22:06:52,703 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration float -> org.hibernate.type.FloatType@8ad6665
+[DEBUG] 2021-09-27 22:06:52,703 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.lang.Float -> org.hibernate.type.FloatType@8ad6665
+[DEBUG] 2021-09-27 22:06:52,704 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration double -> org.hibernate.type.DoubleType@33308786
+[DEBUG] 2021-09-27 22:06:52,704 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration double -> org.hibernate.type.DoubleType@33308786
+[DEBUG] 2021-09-27 22:06:52,704 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@33308786
+[DEBUG] 2021-09-27 22:06:52,705 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@2e1ef60
+[DEBUG] 2021-09-27 22:06:52,706 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@2e1ef60
+[DEBUG] 2021-09-27 22:06:52,707 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration big_integer -> org.hibernate.type.BigIntegerType@6e4566f1
+[DEBUG] 2021-09-27 22:06:52,707 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@6e4566f1
+[DEBUG] 2021-09-27 22:06:52,708 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration string -> org.hibernate.type.StringType@53de625d
+[DEBUG] 2021-09-27 22:06:52,708 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.lang.String -> org.hibernate.type.StringType@53de625d
+[DEBUG] 2021-09-27 22:06:52,708 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration nstring -> org.hibernate.type.StringNVarcharType@4ce1d6d0
+[DEBUG] 2021-09-27 22:06:52,709 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@5dcb4f5f
+[DEBUG] 2021-09-27 22:06:52,709 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration url -> org.hibernate.type.UrlType@3a5ecce3
+[DEBUG] 2021-09-27 22:06:52,709 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.net.URL -> org.hibernate.type.UrlType@3a5ecce3
+[DEBUG] 2021-09-27 22:06:52,710 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration Duration -> org.hibernate.type.DurationType@7803bfd
+[DEBUG] 2021-09-27 22:06:52,710 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.time.Duration -> org.hibernate.type.DurationType@7803bfd
+[DEBUG] 2021-09-27 22:06:52,717 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration Instant -> org.hibernate.type.InstantType@421bba99
+[DEBUG] 2021-09-27 22:06:52,717 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.time.Instant -> org.hibernate.type.InstantType@421bba99
+[DEBUG] 2021-09-27 22:06:52,718 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@4fad9bb2
+[DEBUG] 2021-09-27 22:06:52,719 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@4fad9bb2
+[DEBUG] 2021-09-27 22:06:52,720 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration LocalDate -> org.hibernate.type.LocalDateType@38831718
+[DEBUG] 2021-09-27 22:06:52,720 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@38831718
+[DEBUG] 2021-09-27 22:06:52,721 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@512535ff
+[DEBUG] 2021-09-27 22:06:52,721 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@512535ff
+[DEBUG] 2021-09-27 22:06:52,722 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@7241a47d
+[DEBUG] 2021-09-27 22:06:52,722 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@7241a47d
+[DEBUG] 2021-09-27 22:06:52,723 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@142269f2
+[DEBUG] 2021-09-27 22:06:52,723 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@142269f2
+[DEBUG] 2021-09-27 22:06:52,724 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@487db668
+[DEBUG] 2021-09-27 22:06:52,724 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@487db668
+[DEBUG] 2021-09-27 22:06:52,725 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration date -> org.hibernate.type.DateType@e54303
+[DEBUG] 2021-09-27 22:06:52,726 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.sql.Date -> org.hibernate.type.DateType@e54303
+[DEBUG] 2021-09-27 22:06:52,726 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration time -> org.hibernate.type.TimeType@12ed9db6
+[DEBUG] 2021-09-27 22:06:52,726 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.sql.Time -> org.hibernate.type.TimeType@12ed9db6
+[DEBUG] 2021-09-27 22:06:52,727 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration timestamp -> org.hibernate.type.TimestampType@5f0e9815
+[DEBUG] 2021-09-27 22:06:52,727 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@5f0e9815
+[DEBUG] 2021-09-27 22:06:52,727 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.util.Date -> org.hibernate.type.TimestampType@5f0e9815
+[DEBUG] 2021-09-27 22:06:52,729 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@16c63f5
+[DEBUG] 2021-09-27 22:06:52,729 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration calendar -> org.hibernate.type.CalendarType@28ec166e
+[DEBUG] 2021-09-27 22:06:52,729 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@28ec166e
+[DEBUG] 2021-09-27 22:06:52,729 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@28ec166e
+[DEBUG] 2021-09-27 22:06:52,730 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@12c7a01b
+[DEBUG] 2021-09-27 22:06:52,731 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@737a135b
+[DEBUG] 2021-09-27 22:06:52,731 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration locale -> org.hibernate.type.LocaleType@4ce7fffa
+[DEBUG] 2021-09-27 22:06:52,731 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@4ce7fffa
+[DEBUG] 2021-09-27 22:06:52,732 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration currency -> org.hibernate.type.CurrencyType@76012793
+[DEBUG] 2021-09-27 22:06:52,732 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@76012793
+[DEBUG] 2021-09-27 22:06:52,733 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration timezone -> org.hibernate.type.TimeZoneType@55dfcc6
+[DEBUG] 2021-09-27 22:06:52,733 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@55dfcc6
+[DEBUG] 2021-09-27 22:06:52,733 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration class -> org.hibernate.type.ClassType@46268f08
+[DEBUG] 2021-09-27 22:06:52,734 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.lang.Class -> org.hibernate.type.ClassType@46268f08
+[DEBUG] 2021-09-27 22:06:52,734 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@66565121
+[DEBUG] 2021-09-27 22:06:52,734 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@66565121
+[DEBUG] 2021-09-27 22:06:52,734 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@35f26e72
+[DEBUG] 2021-09-27 22:06:52,735 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration binary -> org.hibernate.type.BinaryType@13d73fa
+[DEBUG] 2021-09-27 22:06:52,735 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration byte[] -> org.hibernate.type.BinaryType@13d73fa
+[DEBUG] 2021-09-27 22:06:52,735 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration [B -> org.hibernate.type.BinaryType@13d73fa
+[DEBUG] 2021-09-27 22:06:52,736 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@3e30646a
+[DEBUG] 2021-09-27 22:06:52,736 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@3e30646a
+[DEBUG] 2021-09-27 22:06:52,736 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@3e30646a
+[DEBUG] 2021-09-27 22:06:52,737 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration row_version -> org.hibernate.type.RowVersionType@1fdf1c5
+[DEBUG] 2021-09-27 22:06:52,738 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration image -> org.hibernate.type.ImageType@13f95696
+[DEBUG] 2021-09-27 22:06:52,738 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration characters -> org.hibernate.type.CharArrayType@ebaa6cb
+[DEBUG] 2021-09-27 22:06:52,738 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration char[] -> org.hibernate.type.CharArrayType@ebaa6cb
+[DEBUG] 2021-09-27 22:06:52,739 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration [C -> org.hibernate.type.CharArrayType@ebaa6cb
+[DEBUG] 2021-09-27 22:06:52,739 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@66fdec9
+[DEBUG] 2021-09-27 22:06:52,740 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@66fdec9
+[DEBUG] 2021-09-27 22:06:52,740 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@66fdec9
+[DEBUG] 2021-09-27 22:06:52,740 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration text -> org.hibernate.type.TextType@52851b44
+[DEBUG] 2021-09-27 22:06:52,741 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration ntext -> org.hibernate.type.NTextType@2dca0d64
+[DEBUG] 2021-09-27 22:06:52,742 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration blob -> org.hibernate.type.BlobType@1e8ce150
+[DEBUG] 2021-09-27 22:06:52,743 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@1e8ce150
+[DEBUG] 2021-09-27 22:06:52,743 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@628c4ac0
+[DEBUG] 2021-09-27 22:06:52,744 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration clob -> org.hibernate.type.ClobType@1477089c
+[DEBUG] 2021-09-27 22:06:52,744 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@1477089c
+[DEBUG] 2021-09-27 22:06:52,746 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration nclob -> org.hibernate.type.NClobType@6ee660fb
+[DEBUG] 2021-09-27 22:06:52,746 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@6ee660fb
+[DEBUG] 2021-09-27 22:06:52,746 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@4372b9b6
+[DEBUG] 2021-09-27 22:06:52,747 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@74960bfa
+[DEBUG] 2021-09-27 22:06:52,748 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration serializable -> org.hibernate.type.SerializableType@54dcfa5a
+[DEBUG] 2021-09-27 22:06:52,750 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration object -> org.hibernate.type.ObjectType@5ccbeb64
+[DEBUG] 2021-09-27 22:06:52,750 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@5ccbeb64
+[DEBUG] 2021-09-27 22:06:52,750 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@3243b914
+[DEBUG] 2021-09-27 22:06:52,751 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@241e8ea6
+[DEBUG] 2021-09-27 22:06:52,751 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@542e560f
+[DEBUG] 2021-09-27 22:06:52,751 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@626c44e7
+[DEBUG] 2021-09-27 22:06:52,751 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@4dc8caa7
+[DEBUG] 2021-09-27 22:06:52,751 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@1d730606
+[DEBUG] 2021-09-27 22:06:52,751 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@3bcbb589
+[DEBUG] 2021-09-27 22:06:52,752 main            org.hibernate.type.BasicTypeRegistry [ 157] Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@3b00856b
+[DEBUG] 2021-09-27 22:06:52,759 main            org.hibernate.boot.internal.BootstrapContextImpl [ 269] Injecting ScanEnvironment [org.hibernate.jpa.boot.internal.StandardJpaScanEnvironmentImpl@25a6944c] into BootstrapContext; was [null]
+[DEBUG] 2021-09-27 22:06:52,759 main            org.hibernate.boot.internal.BootstrapContextImpl [ 264] Injecting ScanOptions [org.hibernate.boot.archive.scan.internal.StandardScanOptions@5e1fa5b1] into BootstrapContext; was [org.hibernate.boot.archive.scan.internal.StandardScanOptions@6b00f608]
+[DEBUG] 2021-09-27 22:06:52,811 main            org.hibernate.boot.internal.BootstrapContextImpl [ 259] Injecting JPA temp ClassLoader [null] into BootstrapContext; was [null]
+[DEBUG] 2021-09-27 22:06:52,811 main            org.hibernate.boot.internal.ClassLoaderAccessImpl [  45] ClassLoaderAccessImpl#injectTempClassLoader(null) [was null]
+[DEBUG] 2021-09-27 22:06:52,818 main            org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory [  99] Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[DEBUG] 2021-09-27 22:06:52,819 main            org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory [  99] Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[DEBUG] 2021-09-27 22:06:52,819 main            org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory [  99] Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2021-09-27 22:06:52,819 main            org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory [  99] Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2021-09-27 22:06:52,819 main            org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory [  99] Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[DEBUG] 2021-09-27 22:06:52,820 main            org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory [  99] Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[DEBUG] 2021-09-27 22:06:52,820 main            org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory [  99] Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[DEBUG] 2021-09-27 22:06:52,821 main            org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory [  99] Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2021-09-27 22:06:52,822 main            org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory [  99] Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+[DEBUG] 2021-09-27 22:06:52,822 main            org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory [  99] Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[DEBUG] 2021-09-27 22:06:52,822 main            org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory [  99] Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[DEBUG] 2021-09-27 22:06:52,823 main            org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory [  99] Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+[DEBUG] 2021-09-27 22:06:52,823 main            org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory [  99] Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2021-09-27 22:06:52,823 main            org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory [  99] Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[ WARN] 2021-09-27 22:06:52,826 main            org.hibernate.orm.connections.pooling [  72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[ INFO] 2021-09-27 22:06:52,833 main            org.hibernate.orm.connections.pooling [ 115] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost/target_training_db?createDatabaseIfNotExist=true]
+[ INFO] 2021-09-27 22:06:52,833 main            org.hibernate.orm.connections.pooling [ 121] HHH10001001: Connection properties: {password=hemapriya, user=root}
+[ INFO] 2021-09-27 22:06:52,833 main            org.hibernate.orm.connections.pooling [ 129] HHH10001003: Autocommit mode: false
+[DEBUG] 2021-09-27 22:06:52,835 main            org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [ 384] Initializing Connection pool with 1 Connections
+[ INFO] 2021-09-27 22:06:52,835 main            org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [ 274] HHH000115: Hibernate connection pool size: 20 (min=1)
+[DEBUG] 2021-09-27 22:06:53,257 main            org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator [  72] Database ->
+       name : MySQL
+    version : 8.0.26
+      major : 8
+      minor : 0
+[DEBUG] 2021-09-27 22:06:53,258 main            org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator [  83] Driver ->
+       name : MySQL Connector/J
+    version : mysql-connector-java-8.0.26 (Revision: 9aae1e450989d62c06616c1dcda3e404ef84df70)
+      major : 8
+      minor : 0
+[DEBUG] 2021-09-27 22:06:53,258 main            org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator [ 389] JDBC version : 4.2
+[ INFO] 2021-09-27 22:06:53,266 main            org.hibernate.dialect.Dialect [ 175] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[DEBUG] 2021-09-27 22:06:53,277 main            org.hibernate.engine.jdbc.env.spi.IdentifierHelperBuilder [ 119] JDBC driver metadata reported database stores quoted identifiers in more than one case
+[DEBUG] 2021-09-27 22:06:53,278 main            org.hibernate.engine.jdbc.env.spi.IdentifierHelperBuilder [ 197] IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+[DEBUG] 2021-09-27 22:06:53,292 main            org.hibernate.boot.model.relational.Namespace [  51] Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[DEBUG] 2021-09-27 22:06:53,294 main            org.hibernate.type.spi.TypeConfiguration$Scope [ 149] Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@4482469c] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@3703bf3c]
+[DEBUG] 2021-09-27 22:06:53,345 main            org.hibernate.internal.SessionFactoryImpl [ 206] Building session factory
+[DEBUG] 2021-09-27 22:06:53,346 main            org.hibernate.cfg.Settings [  68] SessionFactory name : null
+[DEBUG] 2021-09-27 22:06:53,346 main            org.hibernate.cfg.Settings [  69] Automatic flush during beforeCompletion(): enabled
+[DEBUG] 2021-09-27 22:06:53,346 main            org.hibernate.cfg.Settings [  70] Automatic session close at end of transaction: disabled
+[DEBUG] 2021-09-27 22:06:53,346 main            org.hibernate.cfg.Settings [  72] Statistics: disabled
+[DEBUG] 2021-09-27 22:06:53,346 main            org.hibernate.cfg.Settings [  74] Deleted entity synthetic identifier rollback: disabled
+[DEBUG] 2021-09-27 22:06:53,347 main            org.hibernate.cfg.Settings [  75] Default entity-mode: pojo
+[DEBUG] 2021-09-27 22:06:53,347 main            org.hibernate.cfg.Settings [  76] Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[DEBUG] 2021-09-27 22:06:53,347 main            org.hibernate.cfg.Settings [  77] Allow initialization of lazy state outside session : disabled
+[DEBUG] 2021-09-27 22:06:53,347 main            org.hibernate.cfg.Settings [  79] Using BatchFetchStyle : LEGACY
+[DEBUG] 2021-09-27 22:06:53,347 main            org.hibernate.cfg.Settings [  80] Default batch fetch size: -1
+[DEBUG] 2021-09-27 22:06:53,347 main            org.hibernate.cfg.Settings [  81] Maximum outer join fetch depth: 2
+[DEBUG] 2021-09-27 22:06:53,347 main            org.hibernate.cfg.Settings [  82] Default null ordering: NONE
+[DEBUG] 2021-09-27 22:06:53,347 main            org.hibernate.cfg.Settings [  83] Order SQL updates by primary key: disabled
+[DEBUG] 2021-09-27 22:06:53,348 main            org.hibernate.cfg.Settings [  84] Order SQL inserts for batching: disabled
+[DEBUG] 2021-09-27 22:06:53,348 main            org.hibernate.cfg.Settings [  86] multi-tenancy strategy : NONE
+[DEBUG] 2021-09-27 22:06:53,348 main            org.hibernate.cfg.Settings [  88] JTA Track by Thread: enabled
+[DEBUG] 2021-09-27 22:06:53,348 main            org.hibernate.cfg.Settings [  90] Query language substitutions: {}
+[DEBUG] 2021-09-27 22:06:53,348 main            org.hibernate.cfg.Settings [  91] Named query checking : enabled
+[DEBUG] 2021-09-27 22:06:53,348 main            org.hibernate.cfg.Settings [  93] Second-level cache: disabled
+[DEBUG] 2021-09-27 22:06:53,348 main            org.hibernate.cfg.Settings [  94] Second-level query cache: disabled
+[DEBUG] 2021-09-27 22:06:53,349 main            org.hibernate.cfg.Settings [  95] Second-level query cache factory: null
+[DEBUG] 2021-09-27 22:06:53,349 main            org.hibernate.cfg.Settings [  96] Second-level cache region prefix: null
+[DEBUG] 2021-09-27 22:06:53,349 main            org.hibernate.cfg.Settings [  97] Optimize second-level cache for minimal puts: disabled
+[DEBUG] 2021-09-27 22:06:53,349 main            org.hibernate.cfg.Settings [  98] Structured second-level cache entries: disabled
+[DEBUG] 2021-09-27 22:06:53,349 main            org.hibernate.cfg.Settings [  99] Second-level cache direct-reference entries: disabled
+[DEBUG] 2021-09-27 22:06:53,349 main            org.hibernate.cfg.Settings [ 100] Automatic eviction of collection cache: disabled
+[DEBUG] 2021-09-27 22:06:53,349 main            org.hibernate.cfg.Settings [ 102] JDBC batch size: 15
+[DEBUG] 2021-09-27 22:06:53,349 main            org.hibernate.cfg.Settings [ 103] JDBC batch updates for versioned data: enabled
+[DEBUG] 2021-09-27 22:06:53,349 main            org.hibernate.cfg.Settings [ 104] Scrollable result sets: enabled
+[DEBUG] 2021-09-27 22:06:53,350 main            org.hibernate.cfg.Settings [ 105] Wrap result sets: disabled
+[DEBUG] 2021-09-27 22:06:53,350 main            org.hibernate.cfg.Settings [ 106] JDBC3 getGeneratedKeys(): enabled
+[DEBUG] 2021-09-27 22:06:53,350 main            org.hibernate.cfg.Settings [ 107] JDBC result set fetch size: null
+[DEBUG] 2021-09-27 22:06:53,350 main            org.hibernate.cfg.Settings [ 108] Connection release mode: AFTER_TRANSACTION
+[DEBUG] 2021-09-27 22:06:53,350 main            org.hibernate.cfg.Settings [ 109] Generate SQL with comments: disabled
+[DEBUG] 2021-09-27 22:06:53,350 main            org.hibernate.cfg.Settings [ 111] JPA compliance - query : disabled
+[DEBUG] 2021-09-27 22:06:53,351 main            org.hibernate.cfg.Settings [ 112] JPA compliance - closed-handling : disabled
+[DEBUG] 2021-09-27 22:06:53,351 main            org.hibernate.cfg.Settings [ 113] JPA compliance - lists : disabled
+[DEBUG] 2021-09-27 22:06:53,351 main            org.hibernate.cfg.Settings [ 114] JPA compliance - transactions : disabled
+[DEBUG] 2021-09-27 22:06:53,392 main            org.hibernate.service.internal.SessionFactoryServiceRegistryImpl [  92] EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+[DEBUG] 2021-09-27 22:06:53,393 main            org.hibernate.service.internal.SessionFactoryServiceRegistryImpl [  92] EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+[DEBUG] 2021-09-27 22:06:53,402 main            org.hibernate.internal.SessionFactoryImpl [ 268] Session factory constructed with filter configurations : {}
+[DEBUG] 2021-09-27 22:06:53,402 main            org.hibernate.internal.SessionFactoryImpl [ 269] Instantiating session factory with properties: {gopherProxySet=false, awt.toolkit=sun.lwawt.macosx.LWCToolkit, hibernate.format_sql=true, java.specification.version=11, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, hibernate.dialect=org.hibernate.dialect.MySQL8Dialect, java.class.path=/Users/Z0084MD/Desktop/java-training/day-07-factory-jdbc/target/classes:/Users/Z0084MD/.m2/repository/com/h2database/h2/1.4.197/h2-1.4.197.jar:/Users/Z0084MD/.m2/repository/mysql/mysql-connector-java/8.0.26/mysql-connector-java-8.0.26.jar:/Users/Z0084MD/.m2/repository/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4.jar:/Users/Z0084MD/.m2/repository/org/postgresql/postgresql/42.2.23/postgresql-42.2.23.jar:/Users/Z0084MD/.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar:/Users/Z0084MD/.m2/repository/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar:/Users/Z0084MD/.m2/repository/org/slf4j/slf4j-log4j12/1.7.32/slf4j-log4j12-1.7.32.jar:/Users/Z0084MD/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/Z0084MD/.m2/repository/org/hibernate/hibernate-core/5.5.7.Final/hibernate-core-5.5.7.Final.jar:/Users/Z0084MD/.m2/repository/org/jboss/logging/jboss-logging/3.4.2.Final/jboss-logging-3.4.2.Final.jar:/Users/Z0084MD/.m2/repository/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar:/Users/Z0084MD/.m2/repository/org/javassist/javassist/3.27.0-GA/javassist-3.27.0-GA.jar:/Users/Z0084MD/.m2/repository/net/bytebuddy/byte-buddy/1.11.12/byte-buddy-1.11.12.jar:/Users/Z0084MD/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/Z0084MD/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.1.1.Final/jboss-transaction-api_1.2_spec-1.1.1.Final.jar:/Users/Z0084MD/.m2/repository/org/jboss/jandex/2.2.3.Final/jandex-2.2.3.Final.jar:/Users/Z0084MD/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/Z0084MD/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/Users/Z0084MD/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar:/Users/Z0084MD/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/Users/Z0084MD/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.jar:/Users/Z0084MD/.m2/repository/org/glassfish/jaxb/txw2/2.3.1/txw2-2.3.1.jar:/Users/Z0084MD/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.jar:/Users/Z0084MD/.m2/repository/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8.jar:/Users/Z0084MD/.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15.jar, java.vm.vendor=AdoptOpenJDK, sun.arch.data.model=64, java.vendor.url=https://adoptopenjdk.net/, user.timezone=Asia/Kolkata, javax.persistence.jdbc.url=jdbc:mysql://localhost/target_training_db?createDatabaseIfNotExist=true, javax.persistence.jdbc.user=****, os.name=Mac OS X, java.vm.specification.version=11, jakarta.persistence.jdbc.password=****, sun.java.launcher=SUN_STANDARD, user.country=IN, local.setting.IS_JTA_TXN_COORD=false, sun.boot.library.path=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/lib, sun.java.command=com.target.java.training.assignment.programs.ContactsFactoryApplication, jdk.debug=release, jakarta.persistence.jdbc.driver=com.mysql.cj.jdbc.Driver, sun.cpu.endian=little, user.home=/Users/Z0084MD, user.language=en, java.specification.vendor=Oracle Corporation, java.version.date=2020-10-20, java.home=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home, file.separator=/, java.vm.compressedOopsMode=Zero based, jakarta.persistence.jdbc.user=****, line.separator=
+, java.specification.name=Java Platform API Specification, java.vm.specification.vendor=Oracle Corporation, hibernate.transaction.coordinator_class=class org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, javax.persistence.jdbc.driver=com.mysql.cj.jdbc.Driver, hibernate.hbm2ddl.auto=update, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=11.0.9+11, user.name=Z0084MD, path.separator=:, hibernate.connection.username=****, os.version=10.16, java.runtime.name=OpenJDK Runtime Environment, hibernate.connection.url=jdbc:mysql://localhost/target_training_db?createDatabaseIfNotExist=true, file.encoding=UTF-8, hibernate.ejb.persistenceUnitName=TRAINING, java.vm.name=OpenJDK 64-Bit Server VM, hibernate.show_sql=true, java.vendor.version=AdoptOpenJDK, hibernate.connection.driver_class=com.mysql.cj.jdbc.Driver, java.vendor.url.bug=https://github.com/AdoptOpenJDK/openjdk-support/issues, java.io.tmpdir=/var/folders/rw/4pk95_nn00x55zwnr647rmlw0000gr/T/, java.version=11.0.9, user.dir=/Users/Z0084MD/Desktop/java-training/day-07-factory-jdbc, os.arch=x86_64, java.vm.specification.name=Java Virtual Machine Specification, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, hibernate.connection.password=****, sun.os.patch.level=unknown, jakarta.persistence.jdbc.url=jdbc:mysql://localhost/target_training_db?createDatabaseIfNotExist=true, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.registry.StandardServiceRegistryBuilder$1@7428de63, java.library.path=/Users/Z0084MD/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., java.vendor=AdoptOpenJDK, java.vm.info=mixed mode, java.vm.version=11.0.9+11, hibernate.bytecode.use_reflection_optimizer=false, sun.io.unicode.encoding=UnicodeBig, javax.persistence.jdbc.password=****, java.class.version=55.0}
+[DEBUG] 2021-09-27 22:06:53,412 main            org.hibernate.secure.spi.JaccIntegrator [  80] Skipping JACC integration as it was not enabled
+[DEBUG] 2021-09-27 22:06:53,412 main            org.hibernate.internal.SessionFactoryImpl [ 309] Instantiated session factory
+[DEBUG] 2021-09-27 22:06:53,413 main            org.hibernate.type.spi.TypeConfiguration$Scope [ 154] Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@4482469c] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@17740dae]
+[ INFO] 2021-09-27 22:06:53,448 main            org.hibernate.orm.connections.access [  48] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@14ac77b9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[DEBUG] 2021-09-27 22:06:53,495 main            org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [  43] No JtaPlatform was specified, checking resolver
+[DEBUG] 2021-09-27 22:06:53,496 main            org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformResolverInitiator [  33] No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+[DEBUG] 2021-09-27 22:06:53,500 main            org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver [ 137] Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[ INFO] 2021-09-27 22:06:53,501 main            org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [  52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 2021-09-27 22:06:53,503 main            org.hibernate.query.spi.NamedQueryRepository [ 153] Checking 0 named HQL queries
+[DEBUG] 2021-09-27 22:06:53,503 main            org.hibernate.query.spi.NamedQueryRepository [ 167] Checking 0 named SQL queries
+[DEBUG] 2021-09-27 22:06:53,507 main            org.hibernate.service.internal.SessionFactoryServiceRegistryImpl [  92] EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+[DEBUG] 2021-09-27 22:06:53,513 main            org.hibernate.internal.SessionFactoryRegistry [  51] Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@732c9b5c
+[DEBUG] 2021-09-27 22:06:53,515 main            org.hibernate.internal.SessionFactoryRegistry [  73] Registering SessionFactory: a27c2688-5529-4486-9f18-e7bd69b53a75 (<unnamed>)
+[DEBUG] 2021-09-27 22:06:53,516 main            org.hibernate.internal.SessionFactoryRegistry [  80] Not binding SessionFactory to JNDI, no JNDI name configured
+[DEBUG] 2021-09-27 22:06:53,610 main            org.hibernate.stat.internal.StatisticsInitiator [ 101] Statistics initialized [enabled=false]
+[DEBUG] 2021-09-27 22:06:53,616 main            org.hibernate.engine.transaction.internal.TransactionImpl [  53] On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[DEBUG] 2021-09-27 22:06:53,616 main            org.hibernate.engine.transaction.internal.TransactionImpl [  81] begin
+[DEBUG] 2021-09-27 22:06:53,626 main            org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl [ 324] JDBC transaction marked for rollback-only (exception provided for stack trace)
+java.lang.Exception: exception just for purpose of providing stack trace
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.markRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:324)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.markRollbackOnly(TransactionImpl.java:203)
+	at org.hibernate.internal.AbstractSharedSessionContract.markForRollbackOnly(AbstractSharedSessionContract.java:414)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:191)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:752)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:735)
+	at com.target.java.training.assignment.entities.JpaContactsDao.<init>(JpaContactsDao.java:33)
+	at com.target.java.training.assignment.entities.ContactsDaoFactory.getContactsDao(ContactsDaoFactory.java:44)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.start(ContactsFactoryApplication.java:22)
+	at com.target.java.training.assignment.programs.ContactsFactoryApplication.main(ContactsFactoryApplication.java:16)
+[DEBUG] 2021-09-27 22:06:53,627 main            org.hibernate.engine.transaction.internal.TransactionImpl [ 139] rolling back
+[DEBUG] 2021-09-27 22:06:53,630 main            org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl [ 174] Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-09-27 22:06:53,633 main            org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl [ 174] Initiating JDBC connection release from afterTransaction
+[ERROR] 2021-09-27 22:06:53,635 main            com.target.java.training.assignment.entities.JpaContactsDao [  42] Error occurred Unknown entity: com.target.java.training.assignment.entities.Contact
+[DEBUG] 2021-09-27 22:07:39,185 main            org.jboss.logging [  38] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[ERROR] 2021-09-27 22:07:40,244 main            com.target.java.training.assignment.entities.JpaContactsDao [  42] Error occurred Unknown entity: com.target.java.training.assignment.entities.Contact
+[DEBUG] 2021-09-27 22:11:28,727 main            org.jboss.logging [  38] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[ERROR] 2021-09-27 22:11:29,816 main            com.target.java.training.assignment.entities.JpaContactsDao [  42] Error occurred Unknown entity: com.target.java.training.assignment.entities.Contact
+[DEBUG] 2021-09-27 22:12:37,768 main            org.jboss.logging [  38] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[ERROR] 2021-09-27 22:12:38,851 main            com.target.java.training.assignment.entities.JpaContactsDao [  42] Error occurred Unknown entity: com.target.java.training.assignment.entities.Contact
+[DEBUG] 2021-09-27 22:13:36,939 main            org.jboss.logging [  38] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[DEBUG] 2021-09-27 22:14:40,831 main            org.jboss.logging [  38] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[ERROR] 2021-09-27 22:14:42,219 main            com.target.java.training.assignment.entities.JpaContactsDao [  42] Error occurred Error while committing the transaction
+[DEBUG] 2021-09-27 22:23:01,370 main            org.jboss.logging [  38] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[ERROR] 2021-09-27 22:23:02,730 main            com.target.java.training.assignment.entities.JpaContactsDao [  42] Error occurred Error while committing the transaction
+[DEBUG] 2021-09-27 22:25:28,905 main            org.jboss.logging [  38] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[ERROR] 2021-09-27 22:25:30,235 main            com.target.java.training.assignment.entities.JpaContactsDao [  42] Error occurred Error while committing the transaction
+[DEBUG] 2021-09-27 22:27:42,144 main            com.target.java.training.assignment.entities.JpaContactsDao [  59] Contact data saved!
+[DEBUG] 2021-09-27 22:30:03,475 main            org.jboss.logging [  38] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[ERROR] 2021-09-27 22:30:04,861 main            com.target.java.training.assignment.entities.JpaContactsDao [  42] Error occurred Error while committing the transaction
+[DEBUG] 2021-09-27 22:33:18,814 main            org.jboss.logging [  38] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[ERROR] 2021-09-27 22:33:20,220 main            com.target.java.training.assignment.entities.JpaContactsDao [  42] Error occurred Error while committing the transaction
+[DEBUG] 2021-09-27 22:37:48,920 main            org.jboss.logging [  38] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[ERROR] 2021-09-27 22:37:50,306 main            com.target.java.training.assignment.entities.JpaContactsDao [  42] Error occurred Error while committing the transaction
+[DEBUG] 2021-09-27 22:38:03,206 main            org.jboss.logging [  38] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[ERROR] 2021-09-27 22:38:04,597 main            com.target.java.training.assignment.entities.JpaContactsDao [  42] Error occurred Error while committing the transaction
+[DEBUG] 2021-09-27 22:38:11,750 main            com.target.java.training.assignment.entities.JpaContactsDao [ 121] No data found for employee with id 7
+[DEBUG] 2021-09-27 22:39:50,249 main            org.jboss.logging [  38] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[ERROR] 2021-09-27 22:39:51,638 main            com.target.java.training.assignment.entities.JpaContactsDao [  42] Error occurred Error while committing the transaction
+[DEBUG] 2021-09-27 22:39:58,673 main            com.target.java.training.assignment.entities.JpaContactsDao [ 121] No data found for employee with id 78
+[DEBUG] 2021-09-27 22:41:58,793 main            org.jboss.logging [  38] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[ERROR] 2021-09-27 22:42:00,187 main            com.target.java.training.assignment.entities.JpaContactsDao [  43] Error occurred Error while committing the transaction
+[DEBUG] 2021-09-27 22:43:21,165 main            org.jboss.logging [  38] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[ERROR] 2021-09-27 22:43:22,529 main            com.target.java.training.assignment.entities.JpaContactsDao [  42] Error occurred Error while committing the transaction
